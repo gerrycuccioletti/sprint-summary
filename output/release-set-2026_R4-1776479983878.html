@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Release Set — 2026_R4</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;font-size:15px;line-height:1.6}
+  .container{max-width:960px;margin:0 auto;padding:40px 24px 64px}
+  .tabs{display:flex;gap:0;border-bottom:2px solid #e2e8f0;margin:24px 0}
+  .tab{padding:10px 20px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:#0f172a;border-bottom-color:#0f172a}
+  .panel{display:none}.panel.active{display:block}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:20px 0}
+  .stat-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px}
+  .stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+  .stat-value{font-size:24px;font-weight:700;color:#0f172a;margin-top:2px}
+  .summary-box{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:20px 0;color:#334155;font-size:14px;line-height:1.7}
+  .rec-list{list-style:none;margin-top:8px}
+  .rec-list li{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#334155}
+  .rec-list li::before{content:"→ ";color:#3b82f6;font-weight:700}
+  footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size:26px;font-weight:700;color:#0f172a">2026_R4</h1>
+  <div style="color:#64748b;font-size:13px;margin-top:4px">Fix versions: Guest App 1.76, MyCruise Web 1.86.0, Commerce SVCS Apr 26, SVCS Apr 26, MyCruise Hybris 1.59.0, Megaserv 1.76, Kiosk 2.2, Web Check-in 1.76.0, CJ Web 1.1, AEM 26.4.0, Branding Brand 1.76 · Generated 4/17/2026, 10:39:43 PM</div>
+
+  <div style="margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+    <span style="background:#fef9c3;color:#854d0e;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#eab308"></span>Yellow
+    </span>
+    <span style="background:#fef9c3;color:#854d0e;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700">At risk</span>
+  </div>
+
+  <div style="max-width:300px;margin-bottom:8px"><div style="background:#f1f5f9;border-radius:99px;height:10px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+  <div style="font-size:13px;color:#64748b;margin-bottom:16px">No issues tracked yet for a large multi-project release with 11 fix versions across different systems.</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">0</div></div>
+    <div class="stat-card"><div class="stat-label">Done</div><div class="stat-value" style="color:#10b981">0</div></div>
+    <div class="stat-card"><div class="stat-label">In progress</div><div class="stat-value" style="color:#f59e0b">0</div></div>
+    <div class="stat-card"><div class="stat-label">Not started</div><div class="stat-value" style="color:#10b981">0</div></div>
+    <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value">0</div></div>
+    <div class="stat-card"><div class="stat-label">Teams</div><div class="stat-value">0</div></div>
+  </div>
+
+  <div class="summary-box">Release set 2026_R4 spans 11 different applications and services but has zero issues tracked, indicating either very early planning stage or incomplete issue identification. This creates visibility gaps and planning risks for what appears to be a coordinated cross-platform release. Immediate action needed to populate release scope and establish tracking.</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="show('overview',this)">Overview</div>
+    <div class="tab" onclick="show('versions',this)">By version</div>
+    <div class="tab" onclick="show('projects',this)">By project</div>
+    <div class="tab" onclick="show('teams',this)">By team</div>
+    
+  </div>
+
+  <!-- Overview -->
+  <div class="panel active" id="panel-overview">
+    
+    
+    <h2 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:#0f172a">💡 Recommendations</h2>
+    <ul class="rec-list"><li>Conduct release scoping sessions with each product team to identify and create issues for all planned work</li><li>Establish cross-project dependencies mapping between Guest App, MyCruise Web, Commerce SVCS, and other components</li><li>Set up regular cross-team coordination meetings given the scope spans mobile apps, web platforms, services, and content management</li><li>Define release criteria and acceptance gates for each fix version to ensure coordinated delivery</li><li>Implement issue tracking discipline with proper fix version assignment across all 11 components</li></ul>
+  </div>
+
+  <!-- By version -->
+  <div class="panel" id="panel-versions">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="border-bottom:2px solid #e2e8f0">
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Fix version</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Readiness</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Done</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">In progress</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Not started</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Total</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Projects</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <!-- By project -->
+  <div class="panel" id="panel-projects">
+    
+  </div>
+
+  <!-- By team -->
+  <div class="panel" id="panel-teams">
+    
+  </div>
+
+  <!-- Tickets -->
+  
+
+  <footer>Release Set Report · Jira Data Center + Claude AI</footer>
+</div>
+<script>
+function show(id, tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+</script>
+</body>
+</html>

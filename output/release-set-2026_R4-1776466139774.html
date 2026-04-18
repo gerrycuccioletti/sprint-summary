@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Release Set — 2026_R4</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;font-size:15px;line-height:1.6}
+  .container{max-width:960px;margin:0 auto;padding:40px 24px 64px}
+  .tabs{display:flex;gap:0;border-bottom:2px solid #e2e8f0;margin:24px 0}
+  .tab{padding:10px 20px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:#0f172a;border-bottom-color:#0f172a}
+  .panel{display:none}.panel.active{display:block}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:20px 0}
+  .stat-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px}
+  .stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+  .stat-value{font-size:24px;font-weight:700;color:#0f172a;margin-top:2px}
+  .summary-box{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:20px 0;color:#334155;font-size:14px;line-height:1.7}
+  .rec-list{list-style:none;margin-top:8px}
+  .rec-list li{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#334155}
+  .rec-list li::before{content:"→ ";color:#3b82f6;font-weight:700}
+  footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size:26px;font-weight:700;color:#0f172a">2026_R4</h1>
+  <div style="color:#64748b;font-size:13px;margin-top:4px">Fix versions: Guest App 1.76, MyCruise Web 1.86, Commerce SVCS Apr 26, SVCS Apr 26, MyCruise Hybris 1.59, Megaserv 1.76, Kiosk 2.2, Web Check-in 1.76.0, CJ Web 1.1, AEM 26.4.0, Branding Brand 1.76 · Generated 4/17/2026, 6:48:59 PM</div>
+
+  <div style="margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+    <span style="background:#fee2e2;color:#991b1b;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#ef4444"></span>Red
+    </span>
+    <span style="background:#fce7f3;color:#9d174d;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700">Should be descoped</span>
+  </div>
+
+  <div style="max-width:300px;margin-bottom:8px"><div style="background:#f1f5f9;border-radius:99px;height:10px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:3%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">3%</span></div>
+  <div style="font-size:13px;color:#64748b;margin-bottom:16px">Only 2.6% completion rate with critical P1 blockers and multiple QA blocked items preventing release readiness.</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">985</div></div>
+    <div class="stat-card"><div class="stat-label">Done</div><div class="stat-value" style="color:#10b981">26</div></div>
+    <div class="stat-card"><div class="stat-label">In progress</div><div class="stat-value" style="color:#f59e0b">0</div></div>
+    <div class="stat-card"><div class="stat-label">Not started</div><div class="stat-value" style="color:#ef4444">959</div></div>
+    <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value">7</div></div>
+    <div class="stat-card"><div class="stat-label">Teams</div><div class="stat-value">35</div></div>
+  </div>
+
+  <div class="summary-box">This large cross-project release set contains 985 issues with only 26 completed (2.6% done rate). Multiple critical P1 issues are blocked or stuck in development, particularly around payment gateways, service integrations, and platform-specific implementations. The release requires significant descoping or timeline extension given the current state.</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="show('overview',this)">Overview</div>
+    <div class="tab" onclick="show('projects',this)">By project</div>
+    <div class="tab" onclick="show('teams',this)">By team</div>
+  </div>
+
+  <!-- Overview -->
+  <div class="panel active" id="panel-overview">
+    
+    <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#0f172a">🚧 Cross-project blockers</h2>
+    
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-18035</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundles | Services | Conflicts | Order Modify | EligibleOfferings GQL updates</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          <strong>Impact:</strong> Multiple bundle modification and conflict resolution features across iOS and Android are blocked pending service deployment<br>
+          💡 Prioritize service deployment to test environment to unblock bundle workflows
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-10948</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Loyalty | Project Quack | iOS | Unauthenticated Home Tile Entry Point</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          <strong>Impact:</strong> Multiple Project Quack features across iOS and Android are waiting for this foundational component to be merged<br>
+          💡 Complete PR merge and add to merge tracker to unblock Project Quack development
+        </div>
+      </div>
+    
+    <h2 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:#0f172a">💡 Recommendations</h2>
+    <ul class="rec-list"><li>Immediately descope non-critical features and focus on P1 issues only</li><li>Resolve Celebrity STG environment issues blocking folio testing</li><li>Address SalesTrack service stability issues preventing reservation feature testing</li><li>Consider splitting release into smaller, more manageable increments</li><li>Establish clear service dependency resolution process to prevent future blocking</li></ul>
+  </div>
+
+  <!-- By project -->
+  <div class="panel" id="panel-projects">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">COMX</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">CommerceX</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:5%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">5%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/244 done · 🔄 0 in progress · ⏳ 244 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-4349</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Android | NCFC2 Reservation Tab | Create Book Now Reservation Card</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Resolve SalesTrack service dependency before testing can proceed
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">COMX-4339</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Android | NCFC2 Book Now | Book Now Routing to Booking flow</div>
+        <div style="font-size:12px;color:#64748b">Status: Ready for SignOff · Claudia Napoles</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-5837</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Update cruise booking to have bookingMarketCountryCode from Couchbase</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Blocked ticket needed for country-based routing functionality</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">CJ</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Customer Journey</span>
+      </div>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:45%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">45%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/55 done · 🔄 0 in progress · ⏳ 55 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1404</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">GA | iOS | Sign in | Forgot Password | Resiliency entering incorrect email/mobile number</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Merge CJ-2382 dependency to unblock testing
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-1410</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">GA | iOS | Sign In | Consume Services on Sign In Screen</div>
+        <div style="font-size:12px;color:#64748b">Status: Dev In Progress · Rajesh Balamuri</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2588</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Crash | iOS | DigitalPhoto PackageCheckoutStrategy crash</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">P1 crash issue that may need to be deferred</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">LOY</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Loyalty</span>
+      </div>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:35%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">35%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 26/154 done · 🔄 0 in progress · ⏳ 128 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-10948</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Loyalty | Project Quack | iOS | Unauthenticated Home Tile Entry Point</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Complete PR merge to unblock dependent Project Quack features
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P2</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">LOY-12557</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Services | Prod | summary endpoint failing randomly</div>
+        <div style="font-size:12px;color:#64748b">Status: Dev In Progress · Harika Malledi</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-11131</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Loyalty | Project Quack | Android | Authenticated Home Tile Entry Point</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked pending dependency merge</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Onboard Resort Innovation</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:2%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">2%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/287 done · 🔄 0 in progress · ⏳ 287 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-18035</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundles | Services | Conflicts | Order Modify | EligibleOfferings GQL updates</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Complete service deployment to test environment to unblock bundle modification flows
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OBRI-8508</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Bundles | App | iOS | Resiliency for cart modification</div>
+        <div style="font-size:12px;color:#64748b">Status: Code Review · Prasenjit Chakraborty</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-6177</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Bundles | App | Android | Booking | Conflicts | Create Conflicting reservations screen</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked by multiple dependencies preventing bundle conflict testing</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">OPR</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Operations</span>
+      </div>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:75%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">75%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/87 done · 🔄 0 in progress · ⏳ 87 not started</span>
+    </div>
+    
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OPR-9673</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Room Service | Scheduled orders | Orders are not moving to current orders after cutoff time</div>
+        <div style="font-size:12px;color:#64748b">Status: Open · Sakshi Chawla</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#dbeafe;color:#1e40af;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Low</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OPR-7138</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Room Service | iOS | Allergens input by guest - service integration</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Service integration dependency but progressing well</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">RTB</span>
+        
+      </div>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:40%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">40%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/151 done · 🔄 0 in progress · ⏳ 151 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">RTB-49935</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Celebrity Folios services failing</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Resolve Celebrity environment issues blocking folio testing
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">RTB-50383</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Services | STG & Ship | GQL | MobileAppPDPProductDetail | productStatus is null</div>
+        <div style="font-size:12px;color:#64748b">Status: Dev In Progress · Luis Miguel Zavaleta Vazquez</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">RTB-45828</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Android | Folio | Build new 'Add a payment method' modal with embedded payment gateway component</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked pending Celebrity STG environment availability</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">SP</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Special Projects</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:10%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">10%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/7 done · 🔄 0 in progress · ⏳ 7 not started</span>
+    </div>
+    
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">SP-66</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">BUG | Analytics | Android | RBC | Fix activityType in Royal Beach Club/ Celebrity Bazaar Landing Page</div>
+        <div style="font-size:12px;color:#64748b">Status: Open · Mark Bruneau</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">SP-69</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Android | RBC | Content and Images are loading slow</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">P1 performance issue still open without assignee</div>
+      </div></div>
+  </div>
+  </div>
+
+  <!-- By team -->
+  <div class="panel" id="panel-teams">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">CommerceX-Pod2</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:5%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">5%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/244 done · 🔄 0 in progress · ⏳ 244 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: COMX</div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-4566</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">iOS | NCFC2 Reservation Tab | Create Book Now Reservation Card</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Restore SalesTrack service stability for reservation testing
+        </div>
+      </div></div>
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-4349</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Android | NCFC2 Reservation Tab | Create Book Now Reservation Card</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked due to SalesTrack service being down</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Bundles</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:1%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">1%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/89 done · 🔄 0 in progress · ⏳ 89 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-19485</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundle addon product availability issue</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Implement support for unavailable addon products to enable bundle testing
+        </div>
+      </div></div>
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-5347</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Bundles | App | iOS | Booking | Populate - For products PLP screen</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Blocked by unavailable product eligibility scenarios</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Guest 1</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:35%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">35%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/52 done · 🔄 0 in progress · ⏳ 52 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: RTB</div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">RTB-49935</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Celebrity Folios services failing</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Fix Celebrity environment to enable folio feature testing
+        </div>
+      </div></div>
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">RTB-45828</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Android | Folio | Build new 'Add a payment method' modal</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked pending Celebrity STG environment</div>
+      </div></div>
+  </div>
+  </div>
+
+  <footer>Release Set Report · Jira Data Center + Claude AI</footer>
+</div>
+<script>
+function show(id, tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+</script>
+</body>
+</html>

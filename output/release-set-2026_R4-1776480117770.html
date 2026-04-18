@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Release Set — 2026_R4</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;font-size:15px;line-height:1.6}
+  .container{max-width:960px;margin:0 auto;padding:40px 24px 64px}
+  .tabs{display:flex;gap:0;border-bottom:2px solid #e2e8f0;margin:24px 0}
+  .tab{padding:10px 20px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:#0f172a;border-bottom-color:#0f172a}
+  .panel{display:none}.panel.active{display:block}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:20px 0}
+  .stat-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px}
+  .stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+  .stat-value{font-size:24px;font-weight:700;color:#0f172a;margin-top:2px}
+  .summary-box{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:20px 0;color:#334155;font-size:14px;line-height:1.7}
+  .rec-list{list-style:none;margin-top:8px}
+  .rec-list li{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#334155}
+  .rec-list li::before{content:"→ ";color:#3b82f6;font-weight:700}
+  footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size:26px;font-weight:700;color:#0f172a">2026_R4</h1>
+  <div style="color:#64748b;font-size:13px;margin-top:4px">Fix versions: Guest App 1.76, MyCruise Web 1.86.0, Commerce SVCS Apr 26, SVCS Apr 26, MyCruise Hybris 1.59.0, Megaserv 1.76, Kiosk 2.2, Web Check-in 1.76.0, CJ Web 1.1, AEM 26.4.0, Branding Brand 1.76 · Generated 4/17/2026, 10:41:57 PM</div>
+
+  <div style="margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+    <span style="background:#fee2e2;color:#991b1b;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#ef4444"></span>Red
+    </span>
+    <span style="background:#fee2e2;color:#991b1b;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700">Likely delayed</span>
+  </div>
+
+  <div style="max-width:300px;margin-bottom:8px"><div style="background:#f1f5f9;border-radius:99px;height:10px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:40%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">40%</span></div>
+  <div style="font-size:13px;color:#64748b;margin-bottom:16px">Only 40% complete with multiple blocked items and dependencies preventing progress on critical P1 stories.</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">15</div></div>
+    <div class="stat-card"><div class="stat-label">Done</div><div class="stat-value" style="color:#10b981">6</div></div>
+    <div class="stat-card"><div class="stat-label">In progress</div><div class="stat-value" style="color:#f59e0b">9</div></div>
+    <div class="stat-card"><div class="stat-label">Not started</div><div class="stat-value" style="color:#10b981">0</div></div>
+    <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value">1</div></div>
+    <div class="stat-card"><div class="stat-label">Teams</div><div class="stat-value">1</div></div>
+  </div>
+
+  <div class="summary-box">The release is significantly behind with 9 of 15 items still active and multiple QA blocked issues. Critical P1 notification features are stuck due to deployment dependencies and infrastructure issues. Commerce SVCS Apr 26 shows 0% completion with all 4 items in progress.</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="show('overview',this)">Overview</div>
+    <div class="tab" onclick="show('versions',this)">By version</div>
+    <div class="tab" onclick="show('projects',this)">By project</div>
+    <div class="tab" onclick="show('teams',this)">By team</div>
+    <div class="tab" onclick="show('tickets',this)">Tickets (15)</div>
+  </div>
+
+  <!-- Overview -->
+  <div class="panel active" id="panel-overview">
+    
+    <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#0f172a">🚧 Cross-project blockers</h2>
+    
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2385</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Notifications | Services | Mass Notification (mass functions)</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          <strong>Impact:</strong> Blocking CJ-2384 Hybris integration due to jenkins deployment dependency<br>
+          💡 Expedite infrastructure setup and coordinate cross-component deployment
+        </div>
+      </div>
+    
+    <h2 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:#0f172a">💡 Recommendations</h2>
+    <ul class="rec-list"><li>Immediately escalate infrastructure dependencies for CJ-2384 and CJ-2385 to unblock QA progression</li><li>Fast-track code review and approval for CJ-1246 to resolve dependency chain blocking CJ-1620</li><li>Consider parallel QA testing for ready items while infrastructure issues are resolved</li><li>Establish daily standups to monitor blocker resolution and prevent further delays</li></ul>
+  </div>
+
+  <!-- By version -->
+  <div class="panel" id="panel-versions">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="border-bottom:2px solid #e2e8f0">
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Fix version</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Readiness</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Done</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">In progress</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Not started</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Total</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Projects</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 12px;font-weight:600;color:#0f172a">Commerce SVCS Apr 26</td>
+            <td style="padding:10px 12px;min-width:160px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:99px;height:6px;overflow:hidden">
+                  <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+                </div>
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">0%</span>
+              </div>
+            </td>
+            <td style="padding:10px 12px;text-align:right;color:#10b981;font-weight:600">0</td>
+            <td style="padding:10px 12px;text-align:right;color:#f59e0b">4</td>
+            <td style="padding:10px 12px;text-align:right;color:#64748b">0</td>
+            <td style="padding:10px 12px;text-align:right;font-weight:600;color:#0f172a">4</td>
+            <td style="padding:10px 12px;color:#64748b;font-size:12px">CJ</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 12px;font-weight:600;color:#0f172a">Guest App 1.76</td>
+            <td style="padding:10px 12px;min-width:160px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:99px;height:6px;overflow:hidden">
+                  <div style="background:#f59e0b;width:60%;height:100%;border-radius:99px"></div>
+                </div>
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">60%</span>
+              </div>
+            </td>
+            <td style="padding:10px 12px;text-align:right;color:#10b981;font-weight:600">6</td>
+            <td style="padding:10px 12px;text-align:right;color:#f59e0b">4</td>
+            <td style="padding:10px 12px;text-align:right;color:#64748b">0</td>
+            <td style="padding:10px 12px;text-align:right;font-weight:600;color:#0f172a">10</td>
+            <td style="padding:10px 12px;color:#64748b;font-size:12px">CJ</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 12px;font-weight:600;color:#0f172a">MyCruise Hybris 1.59.0</td>
+            <td style="padding:10px 12px;min-width:160px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:99px;height:6px;overflow:hidden">
+                  <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+                </div>
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">0%</span>
+              </div>
+            </td>
+            <td style="padding:10px 12px;text-align:right;color:#10b981;font-weight:600">0</td>
+            <td style="padding:10px 12px;text-align:right;color:#f59e0b">1</td>
+            <td style="padding:10px 12px;text-align:right;color:#64748b">0</td>
+            <td style="padding:10px 12px;text-align:right;font-weight:600;color:#0f172a">1</td>
+            <td style="padding:10px 12px;color:#64748b;font-size:12px">CJ</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- By project -->
+  <div class="panel" id="panel-projects">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">CJ</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Customer Journey</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:40%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">40%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 6/15 done · 🔄 9 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2384</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Expedite jenkins project creation for deployment infrastructure
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1620</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Notification | Service| Error while checking on the reservation details</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Fast-track CJ-1246 approval and deployment to unblock dependent work
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-1246</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Notifications | iOS | Create Mass Update/Reschedule: Notification Takeover</div>
+        <div style="font-size:12px;color:#64748b">Status: Code Review · Maheswaran Chellaiah</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-2384</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:12px;color:#64748b">Status: QA Blocked · Mohammad Akbal Alam</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-690</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Notifications | Android | Create Mass Update/Reschedule: Notification Takeover</div>
+        <div style="font-size:12px;color:#64748b">Status: Ready for SignOff · Shawanda Davis</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-2385</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Notifications | Services | Mass Notification (mass functions)</div>
+        <div style="font-size:12px;color:#64748b">Status: Ready for QA build · Amit Datta</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2384</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked, dependent on CJ-2385 jenkins deployment setup</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1620</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notification | Service| Error while checking on the reservation details</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">QA blocked, dependent on CJ-1246 approval and deployment</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1246</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notifications | iOS | Create Mass Update/Reschedule: Notification Takeover</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Still in code review phase for P1 story</div>
+      </div></div>
+  </div>
+  </div>
+
+  <!-- By team -->
+  <div class="panel" id="panel-teams">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Notifications</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:40%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">40%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 6/15 done · 🔄 9 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: CJ</div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2384</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Coordinate with infrastructure team to create required jenkins project
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1620</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Notification | Service| Error while checking on the reservation details</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Prioritize CJ-1246 completion to unblock dependent testing
+        </div>
+      </div></div>
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2384</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Infrastructure dependency blocking QA progression</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1620</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notification | Service| Error while checking on the reservation details</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Cross-story dependency chain causing delays</div>
+      </div></div>
+  </div>
+  </div>
+
+  <!-- Tickets -->
+  
+  <div class="panel" id="panel-tickets">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="border-bottom:2px solid #e2e8f0">
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Key</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Summary</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Project</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Status</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Priority</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Assignee</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Team</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Fix versions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-688</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | iOS | Mass Cancellation: Notification Takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">QA Test</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Priyanka Uppal</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-689</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Android | Mass Cancellation: Notification Takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for SignOff</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-690</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Android | Create Mass Update/Reschedule: Notification Takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for SignOff</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-1123</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | iOS | Create Balance due notification takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-1124</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Android | Create Balance due notification takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-1139</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Android | Create Processing error notification takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-1246</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | iOS | Create Mass Update/Reschedule: Notification Takeover</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Code Review</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Maheswaran Chellaiah</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-1620</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notification | Service| Error while checking on the reservation details </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">QA Blocked</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P3</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Yazhini Srinivasan</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Commerce SVCS Apr 26</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2229</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notification | iOS | Contact number is not fetched in the takeover screen</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P3</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2384</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Hybris | Integrate with personalization endpoint</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">QA Blocked</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Mohammad Akbal Alam</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MyCruise Hybris 1.59.0</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2385</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notifications | Services | Mass Notification (mass functions)</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for QA build</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P1</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Amit Datta</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Commerce SVCS Apr 26</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2487</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Regression | Notification | Android | App remains blank after clicking on "X" icon to close" in the takeover screen when notification triggered for Process Error notification</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P2</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2488</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Regression | Notification | Android | App remains blank after clicking on "Continue Shopping" in the takeover screen when notification triggered for Process Error notification</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#10b981;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for Production</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P2</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Guest App 1.76</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2746</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px"> Notification | Android| Getting error in the takeover when the recommendation is not given </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for SignOff</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P3</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Commerce SVCS Apr 26</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:8px 12px;font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;white-space:nowrap">CJ-2751</td>
+            <td style="padding:8px 12px;color:#1e293b;max-width:280px">Notification | Android| Getting error in the takeover screen after clicking on view reservation when the order details are given in the request</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">CJ</td>
+            <td style="padding:8px 12px;white-space:nowrap">
+              <span style="display:inline-flex;align-items:center;gap:4px">
+                <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block"></span>
+                <span style="font-size:12px;color:#334155">Ready for SignOff</span>
+              </span>
+            </td>
+            <td style="padding:8px 12px">
+              <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600">P3</span>
+            </td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px;white-space:nowrap">Shawanda Davis</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">MAG7 Notifications</td>
+            <td style="padding:8px 12px;color:#64748b;font-size:12px">Commerce SVCS Apr 26</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>Release Set Report · Jira Data Center + Claude AI</footer>
+</div>
+<script>
+function show(id, tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+</script>
+</body>
+</html>

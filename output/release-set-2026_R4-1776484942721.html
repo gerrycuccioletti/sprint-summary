@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Release Set — 2026_R4</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;font-size:15px;line-height:1.6}
+  .container{max-width:960px;margin:0 auto;padding:40px 24px 64px}
+  .tabs{display:flex;gap:0;border-bottom:2px solid #e2e8f0;margin:24px 0}
+  .tab{padding:10px 20px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:#0f172a;border-bottom-color:#0f172a}
+  .panel{display:none}.panel.active{display:block}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:20px 0}
+  .stat-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px}
+  .stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+  .stat-value{font-size:24px;font-weight:700;color:#0f172a;margin-top:2px}
+  .summary-box{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:20px 0;color:#334155;font-size:14px;line-height:1.7}
+  .rec-list{list-style:none;margin-top:8px}
+  .rec-list li{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#334155}
+  .rec-list li::before{content:"→ ";color:#3b82f6;font-weight:700}
+  footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size:26px;font-weight:700;color:#0f172a">2026_R4</h1>
+  <div style="color:#64748b;font-size:13px;margin-top:4px">Fix versions: 1.0 Future Release, AEM 26.4.0, Branding Brand 1.76, CJ Web 1.1.0, Commerce SVCS Apr 26, Commerce SVCS Mar 26, Commerce SVCS May 26, Commerce SVCS Oct 25, Commerce Services Bundles Release, Future Release, Guest App 1.75, Guest App 1.76, Guest App 1.77, Guest App Bundles Release, Megaserv 1.76, MyCruise Hybris 1.58.0, MyCruise Hybris 1.58.2, MyCruise Hybris 1.59.0, MyCruise Hybris Bundles Release, MyCruise Web 1.85.0, MyCruise Web 1.86, MyCruise Web 1.86.0, MyCruise Web 1.87.0, No Release Needed, SVCS APR 26, SVCS Apr 26, TBD · Generated 4/18/2026, 12:02:22 AM</div>
+
+  <div style="margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+    <span style="background:#fee2e2;color:#991b1b;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#ef4444"></span>Red
+    </span>
+    <span style="background:#fef9c3;color:#854d0e;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700">At risk</span>
+  </div>
+
+  <div style="max-width:300px;margin-bottom:8px"><div style="background:#f1f5f9;border-radius:99px;height:10px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:51%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">51%</span></div>
+  <div style="font-size:13px;color:#64748b;margin-bottom:16px">2 cross-project blocker(s) detected (threshold: 1).</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">944</div></div>
+    <div class="stat-card"><div class="stat-label">Done</div><div class="stat-value" style="color:#10b981">477</div></div>
+    <div class="stat-card"><div class="stat-label">In progress</div><div class="stat-value" style="color:#f59e0b">445</div></div>
+    <div class="stat-card"><div class="stat-label">Not started</div><div class="stat-value" style="color:#ef4444">22</div></div>
+    <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value">7</div></div>
+    <div class="stat-card"><div class="stat-label">Teams</div><div class="stat-value">33</div></div>
+  </div>
+
+  <div class="summary-box">The release shows significant variance in team readiness (7% to 100%) with several high-impact blockers. OBRI has the most issues (317) but lowest readiness (21%), while core Hybris pricing changes across multiple P1 stories remain in QA testing. SalesTrack service outages are blocking critical COMX flows.</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="show('overview',this)">Overview</div>
+    <div class="tab" onclick="show('versions',this)">By version</div>
+    <div class="tab" onclick="show('projects',this)">By project</div>
+    <div class="tab" onclick="show('teams',this)">By team</div>
+    
+  </div>
+
+  <!-- Overview -->
+  <div class="panel active" id="panel-overview">
+    
+    <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#0f172a">🚧 Cross-project blockers</h2>
+    
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-10948</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Loyalty | Project Quack | iOS | Unauthenticated Home Tile Entry Point</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          <strong>Impact:</strong> Blocking multiple dependent stories across Loyalty project<br>
+          💡 Expedite code review completion and merge to unblock cascade
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">PRICING-CORE</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Core Hybris pricing changes</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          <strong>Impact:</strong> Multiple P1 pricing stories in QA testing affecting order calculations<br>
+          💡 Coordinate focused testing effort for all pricing-related stories
+        </div>
+      </div>
+    
+    <h2 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:#0f172a">💡 Recommendations</h2>
+    <ul class="rec-list"><li>Immediate SalesTrack service stability resolution required to unblock COMX testing</li><li>Prioritize MAG7 Bundles team capacity review - 7% readiness with 121 issues needs intervention</li><li>Coordinate core pricing story testing completion to prevent cascade delays</li><li>Address zero-progress teams (Oper-Tender, SP project) through resource reallocation</li><li>Implement daily standup for cross-project dependency resolution</li></ul>
+  </div>
+
+  <!-- By version -->
+  <div class="panel" id="panel-versions">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="border-bottom:2px solid #e2e8f0">
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Fix version</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Readiness</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Done</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">In progress</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Not started</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Total</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Projects</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <!-- By project -->
+  <div class="panel" id="panel-projects">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">OBRI </span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:21%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">21%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 68/317 done · 🔄 241 in progress · ⏳ 8 not started</span>
+    </div>
+    
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OBRI-9717</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Hybris Pricing | IBT | Order SubTotal, Tax, Gratuity & Total calculations</div>
+        <div style="font-size:12px;color:#64748b">Status: QA Test · Unassigned</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-9711</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Hybris Pricing | DB | OE Base Price & Display Base Price</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Core pricing infrastructure change affecting multiple dependent stories</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-9712</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Hybris Pricing | OCC | Cart API changes to populate the Display pricing</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Critical cart functionality change with broad impact</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">COMX</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">CommerceX</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:71%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">71%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 119/167 done · 🔄 47 in progress · ⏳ 1 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-5822</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Services | NCFC2 | Update TA conversion original status for Mobile component</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Resolve SalesTrack service 404 errors blocking QA testing
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-4341</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Android | NCFC2 Book Now | Confirmation interstitial for Book Now</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Fix SalesTrack service outage preventing reservation testing
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P2</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">COMX-5930</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">NCFC2 | Android | Analytics | Update Previous Page Name When Navigating to T&C Page</div>
+        <div style="font-size:12px;color:#64748b">Status: Dev In Progress · Venkatesh Gudivaka</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-5837</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Services | NCFC2 | Book Now | Update cruise booking to have bookingMarketCountryCode</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">SSH access pending for critical booking functionality</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">RTB</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Run the Business</span>
+      </div>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:80%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">80%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 120/150 done · 🔄 29 in progress · ⏳ 1 not started</span>
+    </div>
+    
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">OPR</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Operational</span>
+      </div>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:63%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">63%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 83/132 done · 🔄 46 in progress · ⏳ 3 not started</span>
+    </div>
+    
+    
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OPR-25</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Oper - Tender readiness at 0%</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Complete team showing 0% completion rate</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">LOY</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">LOYALTY</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:49%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">49%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 44/89 done · 🔄 42 in progress · ⏳ 3 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-6182</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Missing Ship and Destination Badges</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Expedite test account provisioning from mewers
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">LOY-12524</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Casino | Service | Performance testing related to COH offers</div>
+        <div style="font-size:12px;color:#64748b">Status: Dev In Progress · Kiran S</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">LOY-11865</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Loyalty | Project Quack | iOS | Consume Content Service</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Blocked on LOY-10948 merge causing cascade delays</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">CJ</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Customer Journey</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:51%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">51%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 43/85 done · 🔄 38 in progress · ⏳ 4 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-1404</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">GA | iOS | Sign in | Forgot Password | Resiliency entering incorrect email/mobile number</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Prioritize CJ-2382 merge to unblock dependent testing
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">CJ-2588</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Crash | iOS | Digital Photo Package Checkout Strategy</div>
+        <div style="font-size:12px;color:#64748b">Status: Tech Design · Nikhil Japtiwale</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">CJ-2384</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Notifications | Hybris | Integrate with personalization endpoint</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Jenkins project deployment dependency causing delays</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">SP</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">Special Projects</span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/4 done · 🔄 2 in progress · ⏳ 2 not started</span>
+    </div>
+    
+    
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">SP-ALL</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Special Projects showing 0% readiness</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">No completed work with 4 total issues</div>
+      </div></div>
+  </div>
+  </div>
+
+  <!-- By team -->
+  <div class="panel" id="panel-teams">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">CommerceX-Pod2</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:73%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">73%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 117/161 done · 🔄 44 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: COMX, LOY</div>
+    
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">COMX-SALESTRACK</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Multiple SalesTrack service dependencies blocked</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Service outages preventing QA testing across multiple stories</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Bundles</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:7%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">7%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 9/121 done · 🔄 112 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">BUNDLES-CORE</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">MAG7 Bundles showing 7% readiness with 121 total issues</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Largest team workload with minimal completion rate</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Customer Journey</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:53%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">53%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 37/70 done · 🔄 29 in progress · ⏳ 4 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: CJ</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI POD 1</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:23%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">23%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 14/61 done · 🔄 45 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Guest 1</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:71%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">71%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 40/56 done · 🔄 15 in progress · ⏳ 1 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: RTB</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI POD 2</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:66%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">66%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 35/53 done · 🔄 16 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Messaging Center</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:85%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">85%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 44/52 done · 🔄 8 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Loyalty Casino</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:62%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">62%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 28/45 done · 🔄 17 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: LOY</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Loyalty Hub</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:46%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">46%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 16/35 done · 🔄 19 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: LOY</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Commerce</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:74%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">74%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 26/35 done · 🔄 7 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: LOY, OBRI, RTB</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Room Service</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:70%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">70%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 23/33 done · 🔄 9 in progress · ⏳ 1 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI POD 4</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:31%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">31%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 8/26 done · 🔄 18 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Tender</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/25 done · 🔄 25 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">TENDER-ZERO</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Oper - Tender showing 0% completion</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">25 issues with no completed work</div>
+      </div></div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Guest 2</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:90%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">90%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 19/21 done · 🔄 2 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: RTB</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Guest 3</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:100%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">100%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 21/21 done · 🔄 0 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: RTB</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">RTB-Hybris</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#f59e0b;width:63%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">63%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 10/16 done · 🔄 6 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: RTB</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Notifications</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:40%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">40%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 6/15 done · 🔄 9 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: CJ</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Kids Club</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:80%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">80%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 12/15 done · 🔄 3 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Dining</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/13 done · 🔄 13 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Pre-Vac | Branding Brand</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:11%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">11%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 1/9 done · 🔄 6 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: COMX, SP</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Propel</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/6 done · 🔄 6 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Loyalty Cobrand</span>
+      <span style="background:#fef9c3;color:#854d0e;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#eab308;display:inline-block"></span>Yellow
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/5 done · 🔄 3 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: LOY</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Special Projects</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:80%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">80%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 4/5 done · 🔄 1 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Beverage</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/4 done · 🔄 4 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI AI Recommendation POD</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/4 done · 🔄 4 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 ShipPromo</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/2 done · 🔄 2 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Oper - Seamless Wifi</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/2 done · 🔄 0 in progress · ⏳ 2 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OPR</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">CommerceX-Pod1</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:100%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">100%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 1/1 done · 🔄 0 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: COMX</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 SeamlessCutOff</span>
+      <span style="background:#d1fae5;color:#065f46;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;display:inline-block"></span>Green
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#10b981;width:100%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">100%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 1/1 done · 🔄 0 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI POD 3</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/1 done · 🔄 1 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">Catalyst POD</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/1 done · 🔄 1 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7-ParkingLot</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:0%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">0%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 0/1 done · 🔄 1 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    
+    
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">*NONE*</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:18%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">18%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 5/28 done · 🔄 19 in progress · ⏳ 4 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: COMX, LOY, OBRI, RTB</div>
+    
+    
+  </div>
+  </div>
+
+  <!-- Tickets -->
+  
+
+  <footer>Release Set Report · Jira Data Center + Claude AI</footer>
+</div>
+<script>
+function show(id, tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+</script>
+</body>
+</html>

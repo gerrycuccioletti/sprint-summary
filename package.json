@@ -1,0 +1,25 @@
+{
+  "name": "sprint-summary",
+  "version": "5.0.0",
+  "description": "Sprint + Release + Release Set health — Jira Data Center + Claude + Slack + Dashboard",
+  "main": "src/index.js",
+  "scripts": {
+    "start":              "node src/index.js",
+    "start:slack":        "node src/index.js --slack",
+    "report":             "node src/index.js --html --slack",
+    "release":            "node release-run.js",
+    "release:report":     "node release-run.js --slack --html",
+    "release-set":        "node release-set-run.js",
+    "release-set:report": "node release-set-run.js --slack --html",
+    "schedule":           "node src/scheduler.js",
+    "test:now":           "node run-now.js",
+    "dashboard":          "node src/dashboard/server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "axios":             "^1.7.0",
+    "dotenv":            "^16.4.0",
+    "express":           "^4.19.0",
+    "node-cron":         "^3.0.3"
+  }
+}

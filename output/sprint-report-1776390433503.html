@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprint Report — LOY HUB 26 S08</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; font-size: 15px; line-height: 1.6; }
+  .container { max-width: 860px; margin: 40px auto; padding: 0 24px 64px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 26px; font-weight: 700; color: #0f172a; }
+  .meta { color: #64748b; font-size: 13px; margin-top: 4px; }
+  .health-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 99px; font-weight: 700; font-size: 14px; margin: 12px 0; background: #fef9c3; color: #854d0e; }
+  .health-dot { width: 10px; height: 10px; border-radius: 50%; background: #eab308; }
+  .health-reason { color: #475569; font-size: 14px; }
+  .summary-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .summary-box p { color: #334155; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 24px 0; }
+  .stat-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 20px; }
+  .stat-label { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: .06em; }
+  .stat-value { font-size: 28px; font-weight: 700; color: #0f172a; margin-top: 4px; }
+  section { margin: 32px 0; }
+  section h2 { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .issue-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
+  .issue-key { font-size: 12px; font-weight: 700; color: #3b82f6; font-family: monospace; }
+  .issue-title { font-weight: 600; margin: 4px 0; color: #1e293b; }
+  .issue-meta { font-size: 13px; color: #64748b; }
+  .issue-action { margin-top: 8px; font-size: 13px; color: #475569; border-top: 1px solid #f1f5f9; padding-top: 8px; }
+  .rec-list { list-style: none; }
+  .rec-list li { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; color: #334155; }
+  .rec-list li::before { content: "→ "; color: #3b82f6; font-weight: 700; }
+  .warn-list { list-style: none; }
+  .warn-list li { background: #fefce8; border: 1px solid #fde047; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; color: #713f12; font-size: 14px; }
+  footer { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 48px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>LOY HUB 26 S08</h1>
+    <div class="meta">Generated on 4/16/2026, 9:47:13 PM · 2026-04-16T03:19:00.000Z → 2026-04-29T03:19:00.000Z</div>
+    <div class="health-badge">
+      <span class="health-dot"></span>
+      Yellow
+    </div>
+    <div class="health-reason">Good progress with many stories in Ready for SignOff, but multiple blockers and dependencies are preventing completion of key features.</div>
+  </header>
+
+  <div class="summary-box">
+    <p>The sprint shows strong testing momentum with 20+ stories awaiting final sign-off, indicating good development velocity. However, Project Quack features are experiencing significant dependency chains and blocking issues, while critical bugs around enrollment failures remain unresolved.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Total Issues</div>
+      <div class="stat-value">67</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Unassigned</div>
+      <div class="stat-value" style="color:#ef4444">9</div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-label">Ready for SignOff</div>
+      <div class="stat-value">20</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Ready for Production</div>
+      <div class="stat-value">4</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Code Review</div>
+      <div class="stat-value">6</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Dev In Progress</div>
+      <div class="stat-value">9</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">QA Test</div>
+      <div class="stat-value">4</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">QA Blocked</div>
+      <div class="stat-value">4</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Blocked</div>
+      <div class="stat-value">2</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Tech Design</div>
+      <div class="stat-value">2</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Grooming Complete</div>
+      <div class="stat-value">6</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Open</div>
+      <div class="stat-value">1</div>
+    </div>
+  </div>
+
+  <!-- Blockers -->
+  
+  <section>
+    <h2>🚧 Blockers</h2>
+    
+    <div class="issue-card">
+      <div class="issue-key">LOY-11865</div>
+      <div class="issue-title">Loyalty | Project Quack | iOS | Consume Content Service</div>
+      <div class="issue-meta">Blocked since: Unknown</div>
+      <div class="issue-action">💡 Merge LOY-10948 PR to unblock dependent Project Quack features</div>
+    </div>
+    <div class="issue-card">
+      <div class="issue-key">LOY-10949</div>
+      <div class="issue-title">Loyalty | Project Quack | Android | Unauthenticated Home Tile Entry Point</div>
+      <div class="issue-meta">Blocked since: Unknown</div>
+      <div class="issue-action">💡 Complete LOY-11866 to enable QA testing</div>
+    </div>
+    <div class="issue-card">
+      <div class="issue-key">LOY-6182</div>
+      <div class="issue-title">Missing Ship and Destination Badges</div>
+      <div class="issue-meta">Blocked since: Long time per comment</div>
+      <div class="issue-action">💡 Provide test data to enable QA testing and completion</div>
+    </div>
+  </section>
+
+  <!-- Risks -->
+  
+  <section>
+    <h2>⚠️ Risks</h2>
+    
+    <div class="issue-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="background:#fee2e2;color:#991b1b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.05em">High</span>
+        <span class="issue-key">LOY-12702</span>
+      </div>
+      <div class="issue-title">LOY | Royal/Celebrity | Mobile | Enrollment failure</div>
+      <div class="issue-meta" style="margin-top:4px">Critical enrollment functionality broken for secondary brands affecting user experience</div>
+    </div>
+    <div class="issue-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="background:#fee2e2;color:#991b1b;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.05em">High</span>
+        <span class="issue-key">LOY-11889</span>
+      </div>
+      <div class="issue-title">Microservices | Regression - Royal/ Celebrity | User is getting message 'something went wrong message' when click on Enroll button</div>
+      <div class="issue-meta" style="margin-top:4px">Regression blocking primary enrollment functionality</div>
+    </div>
+    <div class="issue-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="background:#fef9c3;color:#854d0e;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.05em">Medium</span>
+        <span class="issue-key">LOY-10948</span>
+      </div>
+      <div class="issue-title">Loyalty | Project Quack | iOS | Unauthenticated Home Tile Entry Point</div>
+      <div class="issue-meta" style="margin-top:4px">Multiple Project Quack features depend on this story's completion, creating cascading delays</div>
+    </div>
+  </section>
+
+  <!-- Workload warnings -->
+  
+  <section>
+    <h2>👥 Workload</h2>
+    <ul class="warn-list">
+      <li>Dunia Allender has 15 stories in Ready for SignOff requiring review action</li><li>Multiple Project Quack stories assigned to different developers are blocked by the same dependency</li><li>9 stories remain unassigned including critical end-to-end testing tasks</li>
+    </ul>
+  </section>
+
+  <!-- Recommendations -->
+  
+  <section>
+    <h2>💡 Recommendations</h2>
+    <ul class="rec-list">
+      <li>Prioritize merging LOY-10948 PR to unblock the entire Project Quack feature chain</li><li>Focus immediate attention on enrollment failure bugs (LOY-12702, LOY-11889) as they impact core functionality</li><li>Process the 20 stories in Ready for SignOff to clear the testing backlog</li><li>Assign owners to the 9 unassigned stories, particularly high-priority end-to-end testing tasks</li><li>Provide test data for LOY-6182 to resolve long-standing QA blockage</li>
+    </ul>
+  </section>
+
+  <footer>Generated by Sprint Summary · Jira Data Center + Claude AI</footer>
+</div>
+</body>
+</html>

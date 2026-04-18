@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Release Set — 2026_R4</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;font-size:15px;line-height:1.6}
+  .container{max-width:960px;margin:0 auto;padding:40px 24px 64px}
+  .tabs{display:flex;gap:0;border-bottom:2px solid #e2e8f0;margin:24px 0}
+  .tab{padding:10px 20px;font-size:14px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:#0f172a;border-bottom-color:#0f172a}
+  .panel{display:none}.panel.active{display:block}
+  .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin:20px 0}
+  .stat-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 18px}
+  .stat-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+  .stat-value{font-size:24px;font-weight:700;color:#0f172a;margin-top:2px}
+  .summary-box{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:20px 0;color:#334155;font-size:14px;line-height:1.7}
+  .rec-list{list-style:none;margin-top:8px}
+  .rec-list li{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#334155}
+  .rec-list li::before{content:"→ ";color:#3b82f6;font-weight:700}
+  footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size:26px;font-weight:700;color:#0f172a">2026_R4</h1>
+  <div style="color:#64748b;font-size:13px;margin-top:4px">Fix versions: Guest App 1.76, MyCruise Web 1.86, Commerce SVCS Apr 26, SVCS Apr 26, MyCruise Hybris 1.59, Megaserv 1.76, Kiosk 2.2, Web Check-in 1.76.0, CJ Web 1.1, AEM 26.4.0, Branding Brand 1.76 · Generated 4/17/2026, 10:17:31 PM</div>
+
+  <div style="margin:14px 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+    <span style="background:#fee2e2;color:#991b1b;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:#ef4444"></span>Red
+    </span>
+    <span style="background:#fce7f3;color:#9d174d;padding:5px 14px;border-radius:99px;font-size:13px;font-weight:700">Should be descoped</span>
+  </div>
+
+  <div style="max-width:300px;margin-bottom:8px"><div style="background:#f1f5f9;border-radius:99px;height:10px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:17%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">17%</span></div>
+  <div style="font-size:13px;color:#64748b;margin-bottom:16px">Only 17% complete with 98 active issues, multiple blocking dependencies, and significant unresolved conflicts</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">118</div></div>
+    <div class="stat-card"><div class="stat-label">Done</div><div class="stat-value" style="color:#10b981">20</div></div>
+    <div class="stat-card"><div class="stat-label">In progress</div><div class="stat-value" style="color:#f59e0b">98</div></div>
+    <div class="stat-card"><div class="stat-label">Not started</div><div class="stat-value" style="color:#10b981">0</div></div>
+    <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value">1</div></div>
+    <div class="stat-card"><div class="stat-label">Teams</div><div class="stat-value">1</div></div>
+  </div>
+
+  <div class="summary-box">Release 2026_R4 is severely behind schedule with only 20 of 118 issues completed. Multiple critical P1 stories are blocked by service dependencies and unresolved conflicts. The high volume of issues still in Ready for SignOff suggests testing bottlenecks that could further delay completion.</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="show('overview',this)">Overview</div>
+    <div class="tab" onclick="show('versions',this)">By version</div>
+    <div class="tab" onclick="show('projects',this)">By project</div>
+    <div class="tab" onclick="show('teams',this)">By team</div>
+  </div>
+
+  <!-- Overview -->
+  <div class="panel active" id="panel-overview">
+    
+    
+    <h2 style="font-size:15px;font-weight:700;margin:24px 0 12px;color:#0f172a">💡 Recommendations</h2>
+    <ul class="rec-list"><li>Immediately prioritize resolving service-level blockers (OBRI-19594, OBRI-20275, OBRI-20276) that are blocking multiple P1 stories</li><li>Consider descoping non-critical features like $0 bundle pricing treatments and advanced conflict resolution to focus on core bundle functionality</li><li>Increase QA capacity or implement parallel testing to clear the Ready for SignOff backlog of 47 issues</li><li>Establish daily standup focused on blocked items with service and backend teams to accelerate dependency resolution</li></ul>
+  </div>
+
+  <!-- By version -->
+  <div class="panel" id="panel-versions">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead>
+        <tr style="border-bottom:2px solid #e2e8f0">
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Fix version</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Readiness</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Done</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">In progress</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Not started</th>
+          <th style="text-align:right;padding:8px 12px;color:#64748b;font-weight:500">Total</th>
+          <th style="text-align:left;padding:8px 12px;color:#64748b;font-weight:500">Projects</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 12px;font-weight:600;color:#0f172a">Commerce SVCS Apr 26</td>
+            <td style="padding:10px 12px;min-width:160px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:99px;height:6px;overflow:hidden">
+                  <div style="background:#ef4444;width:7%;height:100%;border-radius:99px"></div>
+                </div>
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">7%</span>
+              </div>
+            </td>
+            <td style="padding:10px 12px;text-align:right;color:#10b981;font-weight:600">1</td>
+            <td style="padding:10px 12px;text-align:right;color:#f59e0b">13</td>
+            <td style="padding:10px 12px;text-align:right;color:#64748b">0</td>
+            <td style="padding:10px 12px;text-align:right;font-weight:600;color:#0f172a">14</td>
+            <td style="padding:10px 12px;color:#64748b;font-size:12px">OBRI</td>
+          </tr><tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 12px;font-weight:600;color:#0f172a">Guest App 1.76</td>
+            <td style="padding:10px 12px;min-width:160px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;background:#f1f5f9;border-radius:99px;height:6px;overflow:hidden">
+                  <div style="background:#ef4444;width:18%;height:100%;border-radius:99px"></div>
+                </div>
+                <span style="font-size:12px;color:#64748b;white-space:nowrap">18%</span>
+              </div>
+            </td>
+            <td style="padding:10px 12px;text-align:right;color:#10b981;font-weight:600">19</td>
+            <td style="padding:10px 12px;text-align:right;color:#f59e0b">85</td>
+            <td style="padding:10px 12px;text-align:right;color:#64748b">0</td>
+            <td style="padding:10px 12px;text-align:right;font-weight:600;color:#0f172a">104</td>
+            <td style="padding:10px 12px;color:#64748b;font-size:12px">OBRI</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- By project -->
+  <div class="panel" id="panel-projects">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <div>
+        <span style="font-size:16px;font-weight:700;color:#0f172a">OBRI</span>
+        <span style="color:#64748b;font-size:13px;margin-left:6px">OBRI </span>
+      </div>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:17%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">17%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 20/118 done · 🔄 98 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-9385</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundles | App | iOS | Order Management | View or Modify Package CTA</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Complete OBRI-4895 code changes to unblock this P1 story
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-8866</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundles | App | iOS | Booking | Add search section to bundle addon products PLP</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Implement required search query for Addon PLP screen
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-5347</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Bundles | App | iOS | Booking | Populate - For products PLP screen</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Resolve unavailable product scenarios and Purchase CTA issues
+        </div>
+      </div></div>
+    <div style="margin-bottom:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⛔ Critical unfinished</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OBRI-17856</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Bundles | App | Android | Conflicts | Order Modify | Remove guests resolution</div>
+        <div style="font-size:12px;color:#64748b">Status: Blocked · Meraj Ali</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OBRI-8837</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Bundles | App | Android | Booking | PLP treatment for $0 bundle price</div>
+        <div style="font-size:12px;color:#64748b">Status: Blocked · Meraj Ali</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="background:#f1f5f9;color:#475569;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">P1</span>
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6;margin-left:6px">OBRI-13738</span>
+        <div style="font-weight:600;color:#1e293b;font-size:14px;margin:3px 0">Android | Order Management | Change Time | Handle Time Conflict on Modify Reservation</div>
+        <div style="font-size:12px;color:#64748b">Status: Blocked · Sundara Manikandan</div>
+      </div></div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-17856</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Bundles | App | Android | Conflicts | Order Modify | Remove guests resolution</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">P1 story blocked due to missing entry numbers for conflict guest resolution</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-8837</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Bundles | App | Android | Booking | PLP treatment for $0 bundle price</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">P1 story blocked pending service changes under OBRI-19594</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-6177</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Bundles | App | Android | Booking | Conflicts | Create "Conflicting reservations" screen</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">P1 story blocked by multiple dependencies OBRI-20258 and OBRI-20259</div>
+      </div></div>
+  </div>
+  </div>
+
+  <!-- By team -->
+  <div class="panel" id="panel-teams">
+    
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:#0f172a">MAG7 Bundles</span>
+      <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:5px">
+        <span style="width:7px;height:7px;border-radius:50%;background:#ef4444;display:inline-block"></span>Red
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px">
+      <div style="min-width:160px"><div style="background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden;min-width:80px">
+    <div style="background:#ef4444;width:17%;height:100%;border-radius:99px"></div>
+  </div>
+  <span style="font-size:11px;color:#64748b">17%</span></div>
+      <span style="font-size:13px;color:#64748b">✅ 20/118 done · 🔄 98 in progress · ⏳ 0 not started</span>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:10px">Projects: OBRI</div>
+    <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">🚧 Blockers</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-20275</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Mass cancellation notification dependency</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Prioritize resolution of OBRI-20275 to unblock notification stories
+        </div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">OBRI-20276</span>
+        <div style="font-weight:600;margin:3px 0;color:#1e293b;font-size:14px">Package details screen dependency</div>
+        <div style="font-size:13px;color:#475569;border-top:1px solid #f1f5f9;padding-top:6px;margin-top:6px">
+          
+          💡 Resolve OBRI-20276 to unblock dining package modification stories
+        </div>
+      </div></div>
+    <div style="margin-top:10px"><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#0f172a">⚠️ Risks</div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">Multiple</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Service dependency bottleneck</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Multiple P1 stories blocked waiting for backend service changes and GraphQL implementations</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fee2e2;color:#991b1b;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">High</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">Multiple</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Testing bottleneck in Ready for SignOff</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">47 issues in Ready for SignOff status indicating potential QA capacity constraints</div>
+      </div>
+      <div style="border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <span style="background:#fef9c3;color:#854d0e;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:700">Medium</span>
+          <span style="font-family:monospace;font-size:12px;font-weight:700;color:#3b82f6">Multiple</span>
+        </div>
+        <div style="font-weight:600;color:#1e293b;font-size:14px">Conflict resolution dependencies</div>
+        <div style="font-size:13px;color:#64748b;margin-top:3px">Several conflict-related stories blocked by missing backend support for guest conflict scenarios</div>
+      </div></div>
+  </div>
+  </div>
+
+  <footer>Release Set Report · Jira Data Center + Claude AI</footer>
+</div>
+<script>
+function show(id, tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+</script>
+</body>
+</html>

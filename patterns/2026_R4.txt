@@ -1,0 +1,1 @@
+(?i)^(Guest App 1\.76|MyCruise Web 1\.86|Commerce SVCS Apr 26|SVCS Apr 26|MyCruise Hybris 1\.59|Megaserv 1\.76|Kiosk 2\.2|Web Check-in 1\.76\.0|CJ Web 1\.1|AEM 26\.4\.0|Branding Brand 1\.76)$
