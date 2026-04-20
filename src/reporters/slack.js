@@ -137,13 +137,26 @@ function buildSlackPayload(analysis, sprint, jiraBaseUrl) {
   };
 }
 
-// Post the Slack notification
-async function sendSlackNotification(analysis, sprint) {
-  const webhookUrl = process.env.SLACK_WEBHOOK_URL;
-  if (!webhookUrl) throw new Error('Missing SLACK_WEBHOOK_URL in environment variables.');
+// Resolve the correct webhook URL for a given board
+function getWebhookUrl(boardId) {
+  const specific = boardId && process.env[`SLACK_WEBHOOK_BOARD_${boardId}`];
+  const fallback = process.env.SLACK_WEBHOOK_DEFAULT
+                || process.env.SLACK_WEBHOOK_URL;
+  const url = specific || fallback;
 
+  if (!url) throw new Error(
+    `No Slack webhook found for board ${boardId}. ` +
+    `Set SLACK_WEBHOOK_BOARD_${boardId} or SLACK_WEBHOOK_DEFAULT in .env`
+  );
+
+  return url;
+}
+
+// Post the Slack notification
+async function sendSlackNotification(analysis, sprint, boardId) {
+  const webhookUrl  = getWebhookUrl(boardId);
   const jiraBaseUrl = process.env.JIRA_BASE_URL || '';
-  const payload = buildSlackPayload(analysis, sprint, jiraBaseUrl);
+  const payload     = buildSlackPayload(analysis, sprint, jiraBaseUrl);
 
   const res = await axios.post(webhookUrl, payload, {
     headers: { 'Content-Type': 'application/json' },

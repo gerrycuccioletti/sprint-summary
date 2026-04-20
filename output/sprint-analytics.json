@@ -1,0 +1,2998 @@
+{
+  "1598": [
+    {
+      "boardId": "1598",
+      "sprintId": 9829,
+      "sprintName": "LOY HUB 26 S07",
+      "runAt": "2026-04-20T01:59:55.131Z",
+      "analysis": {
+        "boardId": "1598",
+        "sprintReport": {
+          "sprintId": 9829,
+          "sprintName": "LOY HUB 26 S07",
+          "sprintGoal": "1.Development & testing for Quack game stories \n2.MySilversea spilled over completion",
+          "startDate": "01/Apr/26 9:47 AM",
+          "endDate": "14/Apr/26 9:47 PM",
+          "completeDate": "15/Apr/26 2:03 PM",
+          "state": "closed",
+          "completedIssues": [
+            {
+              "key": "LOY-1889",
+              "summary": "Loyalty | Services - Enrich Voyage Images with Core Ports Service",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5069",
+              "summary": "Loyalty | MySilversea - Foundational - Add Silversea Content to Config File",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5078",
+              "summary": "Loyalty | MySilversea - Web - Display Recent Cruises Resiliency",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5081",
+              "summary": "Loyalty | MySilversea - Web - Dial Component - Integration with Backend Service",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5082",
+              "summary": "Loyalty | Services - Update Web Enrollment Sources",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5083",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Update web component to support Silversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5089",
+              "summary": "Loyalty | MySilversea - Foundational - Add new Stylesheet/Fonts to Application",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5091",
+              "summary": "Loyalty | Services - Update Sailing History with Silversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5094",
+              "summary": "Loyalty | Royal/Celebrity - Services - Create Content Service to Consume and Expose AEM Content ",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5096",
+              "summary": "Loyalty | MySilversea - Web - Consume Unique ID for Loyalty Tiers",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5098",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Add Loader for Enroll ",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5099",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Integrate Enrollment service",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5110",
+              "summary": "Loyalty | Royal/Celebrity - Web - Update Silversea Loyalty Dial",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5122",
+              "summary": "Loyalty | Services - Update New Enrollment Endpoint",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5124",
+              "summary": "Loyalty | Android - Consume Updated Enrollment Endpoint",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5125",
+              "summary": "Loyalty | Royal/Celebrity - Web - Consume AEM content updates",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5449",
+              "summary": "Loyalty | Royal/Celebrity - Web - Update VS Pretier Enrollment",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-5633",
+              "summary": "Mobile | Regression | iOS|The subtext on the Join Loyalty screen is not center-aligned as per figma",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Nutan Vishwajeet Patil",
+              "storyPoints": 0.5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6486",
+              "summary": "Loyalty | Royal/Celebrity - Services - Consume Unique ID for Loyalty Tiers",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6557",
+              "summary": "Loyalty | Services - Update Status Match Services",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6604",
+              "summary": "Loyalty | Royal/Celebrity - Web - Silversea Feature Flag Clean Up",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6839",
+              "summary": "Loyalty | Royal/Celebrity - Services - Consume content updates",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6915",
+              "summary": "Loyalty | Android - Loyalty Match Tab - Integrate secondary brand linking process",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6919",
+              "summary": "Loyalty | Services - Update the Update Loyalty ID endpoint with a new URI format and behavior for SSC",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6939",
+              "summary": "Loyalty | Analytics - iOS - Silversea - Loyalty Match tab - Integrate secondary brand enrollment process",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6942",
+              "summary": "Loyalty | Analytics - iOS - Silversea - Loyalty Match tab - Enrollment success / failure modal functionality",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-6947",
+              "summary": "Loyalty | Services - Update Enrollment Sources",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7002",
+              "summary": "Loyalty | MySilversea - Foundational - Handshake with MySilversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7004",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Update the Update Loyalty ID endpoint with a new URI format and behavior for SSC",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7668",
+              "summary": "Loyalty | Services - Update the ForgeRockValidateHeaderToken shared flow to accept an access token without an account ID present in the request",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7669",
+              "summary": "Loyalty | Services - Update the Get Account Lite endpoint to enable retrieval of SSC accounts",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7699",
+              "summary": "Loyalty | Analytics - iOS - Silversea - Loyalty Match tab - Successful Link popUp trackAction",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7701",
+              "summary": "Loyalty | Analytics - Android - Silversea - Loyalty Match tab - Link Loyalty Number Modal trackState",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7703",
+              "summary": "Loyalty | Analytics - iOS - Silversea - Loyalty Match tab - Link Loyalty Number Fail trackAction",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-7705",
+              "summary": "Loyalty | Analytics - Android - Silversea - Loyalty Match tab - Link Loyalty Number Fail trackAction",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8004",
+              "summary": "Loyalty | Services - Consume content updates (new fields being added in AEM instead of replacing the existing fields values)",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8008",
+              "summary": "GA | Services | Getting \"errorCode\": \"CORE-2612\", for Get loyalty-tiers/PREVIEW call for Celebrity.",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8212",
+              "summary": "Loyalty | Royal/Celebrity - Web - Dial Component - Consuming new JSON language files",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8349",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Standardization of Key Value Pairs between brands",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8350",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Consuming new JSON language files",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8822",
+              "summary": "Loyalty | Royal/Celebrity - Web - Enrollment Component - Silversea Enrollment Success Behavior",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8936",
+              "summary": "Loyalty | Royal/Celebrity - Web - Code clean up for FF in commerce webapp",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-9242",
+              "summary": "Enrich the internal endpoints /guestAccounts/<ID>/internal and /guestProfiles/internal with Venetian Society properties to support downstream features and analytics.",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-9403",
+              "summary": "Loyalty | MySilversea - Web - Disable Header/ Footer/Breadcrumbs",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-9405",
+              "summary": "Loyalty | Guest Account 2.0 | Foundational - Splunk Observability Cloud",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-9793",
+              "summary": "Loyalty | MySilversea - Royal/Celebrity - Services - Terms and conditions link",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10002",
+              "summary": "Loyalty | MySilversea - Foundational - IFrame Navigation Links",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10694",
+              "summary": "Loyalty | MySilversea - Implementing session storage to preserve the state of the Silversea application when users switch brands via pill navigation",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10777",
+              "summary": "Loyalty | Web - Customer Journey: Migrate Venetian Society enrollment to use venetianSocietyId instead of enrollmentSubmitted",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10957",
+              "summary": "Loyalty | Android- Remove isMySilverseaEnrollmentEnabled Flag from Code",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11184",
+              "summary": "Loyalty | Android - Consume Feature Toggle For Silversea Production Testing",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11185",
+              "summary": "Loyalty | Web - Consume Feature Toggle For Silversea Production Testing",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11409",
+              "summary": "Loyalty | MySilversea - Fix iframe height calculation to prevent dual scrollbar",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11535",
+              "summary": "Get Venetian society loyalty data from construct.siebel get profile instead of getting from GA.Profiles DB ",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11793",
+              "summary": "Update the publish version for Dial and Enrolment components",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Manny Ferrario",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11796",
+              "summary": "LOY | MySilversea | User not able to register",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Unassigned",
+              "storyPoints": 0,
+              "status": "Rejected"
+            }
+          ],
+          "incompletedIssues": [
+            {
+              "key": "LOY-5046",
+              "summary": "Loyalty | MySilversea - Web - Display Notes - Your Benefits",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5050",
+              "summary": "Loyalty | MySilversea - Web - Display Enrolled Section - Primary Brand With No Cruises & Secondary Past Cruises",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5051",
+              "summary": "Loyalty | MySilversea - Web - Display Enrolled Section - Primary Brand With Cruises",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Kavya Reddy Revunuru",
+              "storyPoints": 5,
+              "status": "QA Blocked"
+            },
+            {
+              "key": "LOY-5052",
+              "summary": "Loyalty | MySilversea - Web - Display Unenrolled Section - Secondary Brand",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5067",
+              "summary": "Loyalty | MySilversea - Web - Consume New Guest Account Loyalty Content",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5073",
+              "summary": "Loyalty | MySilversea - Web - Display Notes - Earn Points",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5075",
+              "summary": "Loyalty | MySilversea - Web - Display Your Benefits - Enrolled",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 8,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5076",
+              "summary": "Loyalty | MySilversea - Web - Display Unenrolled Section - Primary Brand",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5077",
+              "summary": "Loyalty | MySilversea - Web - Display Earn Points",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5079",
+              "summary": "Loyalty | MySilversea - Web - Display Program Benefits - Unenrolled",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5084",
+              "summary": "Loyalty | MySilversea - Web - Display Detailed Benefits Page",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5085",
+              "summary": "Loyalty | MySilversea - Web - Display Notes - Program Benefits",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5093",
+              "summary": " Loyalty | MySilversea - Royal/Celebrity - AEM - Create/update strings/content for new updates",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5095",
+              "summary": "Loyalty | MySilversea - Royal/Celebrity - AEM - Create Unique ID for Loyalty Tiers",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5097",
+              "summary": "Loyalty | MySilversea - Web - Consolidated UI Updates for Enrollment & Account Linking Modals",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5104",
+              "summary": "Loyalty | AEM - Create/update strings/content for new updates",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5109",
+              "summary": "Loyalty | Royal/Celebrity - AEM - Create/update strings/content for new updates",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5123",
+              "summary": "Loyalty | iOS - Consume Updated Enrollment Endpoint",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5250",
+              "summary": "Loyalty | Services - Create Kafka consumer for the “Connected to Wifi Event”",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Shiv Shankar Pal",
+              "storyPoints": 5,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-5834",
+              "summary": "Loyalty | Android - Rewards Landing - Available",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5837",
+              "summary": "Loyalty | iOS - Rewards Landing - Available",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5838",
+              "summary": "Loyalty | Android - Rewards Landing - Redeemed",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5839",
+              "summary": "Loyalty | iOS - Rewards Landing - Redeemed",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-5894",
+              "summary": "Loyalty | Android - Detail Landing Screen Shimmer",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-6182",
+              "summary": "Missing Ship and Destination Badges",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "QA Blocked"
+            },
+            {
+              "key": "LOY-6491",
+              "summary": "Loyalty | Royal/Celebrity - Web - Loyalty Hub End to End Testing",
+              "typeName": "Action",
+              "priorityName": "P1",
+              "assigneeName": "Unassigned",
+              "storyPoints": 3,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-6761",
+              "summary": "Loyalty | Services - Create Rewards Endpoint",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Qazi Kashif Jamal",
+              "storyPoints": 5,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-6916",
+              "summary": "Loyalty | iOS - Loyalty Match Tab - Integrate secondary brand linking process",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-7338",
+              "summary": "Loyalty | MySilversea Website - Loyalty Hub End to End Testing",
+              "typeName": "Action",
+              "priorityName": "P1",
+              "assigneeName": "Unassigned",
+              "storyPoints": 3,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-7718",
+              "summary": "Loyalty | Royal/Celebrity App - iOS - Loyalty Hub End to End Testing",
+              "typeName": "Action",
+              "priorityName": "P1",
+              "assigneeName": "Unassigned",
+              "storyPoints": 3,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-7843",
+              "summary": "Loyalty | Royal/Celebrity App - Android - Loyalty Hub End to End Testing",
+              "typeName": "Action",
+              "priorityName": "P1",
+              "assigneeName": "Nutan Vishwajeet Patil",
+              "storyPoints": 3,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-8005",
+              "summary": "Loyalty | AEM - Create content updates (new fields being added in AEM instead of replacing the existing fields values)",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-9307",
+              "summary": "Loyalty | MySilversea - Web - Display Program Benefits - Unenrolled Product Detailed Benefits Page",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-9738",
+              "summary": "Loyalty | MySilversea - Web - Hide CreditCard banner on Silversea primary brand",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Dunia Allender",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-9792",
+              "summary": "Loyalty | MySilversea - Royal/Celebrity - AEM -  Terms and conditions link",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-10948",
+              "summary": "Loyalty | Project Quack | iOS | Unauthenticated Home Tile Entry Point",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ajay Kumar Singh",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-10949",
+              "summary": "Loyalty | Project Quack | Android | Unauthenticated Home Tile Entry Point",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ivan Johnson",
+              "storyPoints": 2,
+              "status": "Ready for QA build"
+            },
+            {
+              "key": "LOY-10952",
+              "summary": "Loyalty | Project Quack | iOS | In-App Webview and Return Path",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-10953",
+              "summary": "Loyalty | Project Quack | Android | In-App Webview and Return Path",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Thakur",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-10954",
+              "summary": "Loyalty | IOS - Remove isMySilverseaEnrollmentEnabled Flag from Code",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Bhakti Malkhare",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11125",
+              "summary": "Loyalty | Project Quack | SVC | Content Service Integration",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11128",
+              "summary": "Loyalty | Project Quack | iOS | Launch Darkly | Consume feature Toggle for Game",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ajay Kumar Singh",
+              "storyPoints": 1,
+              "status": "Ready for QA build"
+            },
+            {
+              "key": "LOY-11129",
+              "summary": "Loyalty | Project Quack | Android | Launch Darkly | Consume feature Toggle for Game",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11130",
+              "summary": "Loyalty | Project Quack | iOS | Authenticated Home Tile Entry Point",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ajay Kumar Singh",
+              "storyPoints": 3,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-11131",
+              "summary": "Loyalty | Project Quack | Android | Authenticated Home Tile Entry Point",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ivan Johnson",
+              "storyPoints": 3,
+              "status": "Ready for QA build"
+            },
+            {
+              "key": "LOY-11183",
+              "summary": "Loyalty | iOS - Consume Feature Toggle For Silversea Production Testing",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Sakthi Vadivel Arumugam",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11219",
+              "summary": "Loyalty | Android - Refactor LoyaltyHubScreenViewModel",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 2,
+              "status": "Ready for QA build"
+            },
+            {
+              "key": "LOY-11221",
+              "summary": "Loyalty | Project Quack | iOS | Quack Game CTA trackAction",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-11728",
+              "summary": "Loyalty | Project Quack | AEM Build",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Suneel Kumar Maddirala",
+              "storyPoints": 1,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-11865",
+              "summary": "Loyalty | Project Quack | iOS | Consume Content Service",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Ajay Kumar Singh",
+              "storyPoints": 2,
+              "status": "Ready for QA build"
+            },
+            {
+              "key": "LOY-11866",
+              "summary": "Loyalty | Project Quack | Android | Consume Content Service",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Akshitha AR",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-11867",
+              "summary": "Loyalty | Project Quack | Launch Darkly | Create feature Toggle for Game",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Vanessa Palacios",
+              "storyPoints": 0,
+              "status": "QA Blocked"
+            },
+            {
+              "key": "LOY-11870",
+              "summary": "Loyalty | Project Quack | Android | Analytics ",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Thakur",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-11871",
+              "summary": "LOY | VSS | Enrollment failure",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Suneel Kumar Maddirala",
+              "storyPoints": 0,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-11889",
+              "summary": "Microservices | Regression - Royal/ Celebrity | User is getting message  \"something went wrong message\" when click on Enroll button",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sughaasini Parthasarathy",
+              "storyPoints": 1,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-12017",
+              "summary": "Loyalty | Project Quack | iOS | Quack Game entry point fails to render trackAction",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-12018",
+              "summary": "Loyalty | Project Quack | Android | Quack Game entry point fails to render trackAction",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Thakur",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-12562",
+              "summary": "LOY|WEB| Background color for the Recent Trips fallback image issue in the Celebrity",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sughaasini Parthasarathy",
+              "storyPoints": 0,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-12702",
+              "summary": "LOY | Royal/Celebrity | Mobile | Enrollment failure",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "SantuKumar Bhuniya",
+              "storyPoints": 0,
+              "status": "Blocked"
+            },
+            {
+              "key": "LOY-12722",
+              "summary": "Loyalty |  Royal/Celebrity - Web - Update Royal/Celebrity Resiliency Image",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Kavya Reddy Revunuru",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-12738",
+              "summary": "Loyalty | Web - Customer Journey: Migrate Venetian Society enrollment to use venetianSocietyId instead of enrollmentSubmitted",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sughaasini Parthasarathy",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            }
+          ],
+          "completedOutsideIssues": [],
+          "removedIssues": [
+            {
+              "key": "LOY-5842",
+              "summary": "Loyalty | Android - Rewards Takeover",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Nutan Vishwajeet Patil",
+              "storyPoints": 5,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-5863",
+              "summary": "Loyalty | Android - Rewards Takeover Shimmer",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Nutan Vishwajeet Patil",
+              "storyPoints": 3,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-5865",
+              "summary": "Loyalty | iOS - Rewards Takeover Shimmer",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Gopinath Vv",
+              "storyPoints": 3,
+              "status": "QA Blocked"
+            },
+            {
+              "key": "LOY-5870",
+              "summary": "Loyalty | Android - Rewards Takeover Resiliency",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Amit Thakur",
+              "storyPoints": 5,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-5892",
+              "summary": "Loyalty | Android - Detail Landing Screen",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Amit Thakur",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            }
+          ],
+          "addedDuringSprintCount": 12,
+          "addedDuringSprintPoints": 24,
+          "completedPoints": 163.5,
+          "incompletedPoints": 176,
+          "completedOutsidePoints": 0,
+          "removedPoints": 18
+        },
+        "velocityStats": {
+          "avg": 41,
+          "avgRecent": 71,
+          "trend": "improving",
+          "sprints": [
+            {
+              "sprintId": 9624,
+              "sprintName": "LOY HUB 26 S02",
+              "state": "closed",
+              "committed": 202.5,
+              "completed": 7
+            },
+            {
+              "sprintId": 9625,
+              "sprintName": "LOY HUB 26 S03",
+              "state": "closed",
+              "committed": 286.5,
+              "completed": 10
+            },
+            {
+              "sprintId": 9626,
+              "sprintName": "LOY HUB 26 S04",
+              "state": "closed",
+              "committed": 324.5,
+              "completed": 19
+            },
+            {
+              "sprintId": 9627,
+              "sprintName": "LOY HUB 26 S05",
+              "state": "closed",
+              "committed": 324.5,
+              "completed": 15
+            },
+            {
+              "sprintId": 9803,
+              "sprintName": "LOY HUB 26 S06",
+              "state": "closed",
+              "committed": 335.5,
+              "completed": 33
+            },
+            {
+              "sprintId": 9829,
+              "sprintName": "LOY HUB 26 S07",
+              "state": "closed",
+              "committed": 330.5,
+              "completed": 163.5
+            }
+          ]
+        },
+        "completion": {
+          "total": 117,
+          "completed": 56,
+          "completedInSprint": 56,
+          "completedOutside": 0,
+          "pct": 48,
+          "completedPts": 163.5,
+          "totalPts": 339.5,
+          "ptsPct": 48
+        },
+        "sprintHealth": "Red",
+        "healthReason": "48% of issues completed.",
+        "velocityAssessment": "Velocity trend is improving, avg 41 pts.",
+        "completionAssessment": "56/117 issues done.",
+        "goalMet": null,
+        "goalComment": "[Dry-run]",
+        "risks": [],
+        "recommendations": [],
+        "predictedVelocity": 41,
+        "summary": "[Dry-run — Claude not called]",
+        "platformVelocity": [
+          {
+            "platform": "Web",
+            "avg": 22,
+            "total": 134,
+            "sprintCount": 6,
+            "bySprint": {
+              "9624": 7,
+              "9625": 5,
+              "9626": 8,
+              "9627": 15,
+              "9803": 17,
+              "9829": 82
+            }
+          },
+          {
+            "platform": "Microservices",
+            "avg": 14,
+            "total": 56,
+            "sprintCount": 4,
+            "bySprint": {
+              "9625": 3,
+              "9626": 1,
+              "9803": 2,
+              "9829": 50
+            }
+          },
+          {
+            "platform": "Android",
+            "avg": 13,
+            "total": 39,
+            "sprintCount": 3,
+            "bySprint": {
+              "9626": 9,
+              "9803": 10,
+              "9829": 20
+            }
+          },
+          {
+            "platform": "iOS",
+            "avg": 6,
+            "total": 18.5,
+            "sprintCount": 3,
+            "bySprint": {
+              "9626": 1,
+              "9803": 6,
+              "9829": 11.5
+            }
+          },
+          {
+            "platform": "AEM",
+            "avg": 2,
+            "total": 2,
+            "sprintCount": 1,
+            "bySprint": {
+              "9625": 2
+            }
+          }
+        ],
+        "teamName": "LOY_HUB",
+        "displayName": "LOY_HUB (Board 1598)"
+      }
+    }
+  ],
+  "1599": [
+    {
+      "boardId": "1599",
+      "sprintId": 9790,
+      "sprintName": "LOY COB 26 S07",
+      "runAt": "2026-04-20T02:00:09.798Z",
+      "analysis": {
+        "boardId": "1599",
+        "sprintReport": {
+          "sprintId": 9790,
+          "sprintName": "LOY COB 26 S07",
+          "sprintGoal": null,
+          "startDate": "01/Apr/26 2:23 PM",
+          "endDate": "15/Apr/26 10:23 PM",
+          "completeDate": "15/Apr/26 6:43 PM",
+          "state": "closed",
+          "completedIssues": [
+            {
+              "key": "LOY-6534",
+              "summary": "Cobrand | Web | Koddi | Commerce WebApp - Implement LD flag and Integrate the retail media service API (Page ID: 2400)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8283",
+              "summary": "Cobrand | Web | Koddi | Customer Journey - New Koddi Placement for Dashboard (Page ID - 2301)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8371",
+              "summary": "Cobrand | Analytics | react | Koddi - impression new ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-8372",
+              "summary": "Cobrand | Analytics | react | Koddi - clicks ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-9505",
+              "summary": "Cobrand | Analytics | RN| Koddi - clicks ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10044",
+              "summary": "Cobrand | AEM | Non-Cardholder Content for Silversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10177",
+              "summary": "[Analytics] Cobrand |Adobe| Web | Ad Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10367",
+              "summary": "[Analytics] Cobrand | web | Track impression new ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10882",
+              "summary": " Cobrand | RN | ReactNative package updated",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Claude Wild",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10923",
+              "summary": "Cobrand | RN Spike | Analyze Silversea Requirements ",
+              "typeName": "Spike",
+              "priorityName": "P3",
+              "assigneeName": "Claude Wild",
+              "storyPoints": 5,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-10983",
+              "summary": "Cobrand | RN | (Post-Launch) Shimmer while switching cards",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11242",
+              "summary": "Cobrand | Prod | Web | CH | View All benefits image section is not centered",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Rajasekaran Jayasakthivel  Rajkumar",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11588",
+              "summary": "Cobrand | Analytics | react web | Bug PageView modal perks",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11589",
+              "summary": "Cobrand | Analytics | react web | BUG Track interactions on the bonuses and perks screen",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11711",
+              "summary": "Cobrand | Web (CJ) - Koddi Changes Required to Enable successful e2e workflow",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 5,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11729",
+              "summary": "Cobrand | Analytics | web | Bug Global Variable cobrandcardMember evar207",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11828",
+              "summary": "Bundle Size Investigation - Loyalty Cobrand NPM Package",
+              "typeName": "Spike",
+              "priorityName": "P3",
+              "assigneeName": "Jose Antonio Mena",
+              "storyPoints": 5,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-11890",
+              "summary": "Co-brand | AEM | Shipboard - CEL Benefits Carousel Images Missing",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Duncan Taylor",
+              "storyPoints": 0,
+              "status": "Rejected"
+            },
+            {
+              "key": "LOY-12010",
+              "summary": "CLONE - Cobrand | Android - ACH is showing \"Book your next Cruise\"",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-12011",
+              "summary": "Cobrand | Services | RMS | Non-Cobrand Ads — Add subtitle, adLabel and locale-variant field support",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12019",
+              "summary": "Cobrand | iOS | Remove Progamme check and show Book Cruise for nonCH",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12269",
+              "summary": "Cobrand | Prod | Web | Clicking on \"Redeem for Onboard Credit \" , \"Reduce your final payment\" , \"Pay less for your next cruise\" makes user to a different URL",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12447",
+              "summary": "PROD | Cobrand widget | Text mismatch for Royal and Celebrity ",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12526",
+              "summary": "Cobrand | Analytics | iOS | Koddi - clicks ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12537",
+              "summary": "Cobrand | Web/Angular Bug - Celebrity - incorrect global variable for \"brand\"",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12538",
+              "summary": "Cobrand | Web/Angular Bug - missing global variable values in Celebrity brand",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12540",
+              "summary": "Cobrand | Services | Retail Media | Ship Lab - APIGEE ship-to-shore routing missing and cobrand 5xx causes 503",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12542",
+              "summary": "LOY | IOS | Koddi | Ship env not displaying ads",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12560",
+              "summary": "[analytics] Cobrand | Adobe | web | Correct impression new ads",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12561",
+              "summary": "LOYALTY.Cobrand | Android | Koddi | Ship env not displaying ads",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12563",
+              "summary": "LOY | RN | Koddi | Ship env not displaying ads",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Mahendran Palanisamy",
+              "storyPoints": 0,
+              "status": "Rejected"
+            },
+            {
+              "key": "LOY-12564",
+              "summary": "Loyalty.Cobrand | APP\\WEB | QA | Validation of Co-Brand ADS ",
+              "typeName": "Action",
+              "priorityName": "P3",
+              "assigneeName": "Divya Jyoti Singh",
+              "storyPoints": 0,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-12589",
+              "summary": "[Analytics] Cobrand |Adobe| Web | Correct Ad Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sagine Ferrus",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12618",
+              "summary": "Cobrand | Android - App Not Calling Correct Koddi Page IDs For Home, Dashboard, Profile",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12620",
+              "summary": "Cobrand | Android - Calls To Retail Media Endpoint Not Being Made On Ship",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12625",
+              "summary": " Loyalty.Cobrand | ios | QA | Validation of Co-Brand ADS ",
+              "typeName": "Action",
+              "priorityName": "P3",
+              "assigneeName": "Divya Jyoti Singh",
+              "storyPoints": 0,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-12626",
+              "summary": "Loyalty.Cobrand | Android | QA | Validation of Co-Brand ADS ",
+              "typeName": "Action",
+              "priorityName": "P3",
+              "assigneeName": "Pranitha Lagisetty",
+              "storyPoints": 0,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-12713",
+              "summary": "Cobrand | iOS - Widget background for resiliency is showing co-brand blue and not brand ship image",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            }
+          ],
+          "incompletedIssues": [
+            {
+              "key": "LOY-10071",
+              "summary": "Cobrand | RN | Performance Optimization for React Web",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Claude Wild",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-10685",
+              "summary": "Cobrand | Prod - Refunded Dollar amount is not displaying in details (missing from Siebel response)",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 0,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-10767",
+              "summary": "Cobrand | AEM | Clean down all UI screens and communications copy with final program language (including fee disclosures)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-11642",
+              "summary": "Cobrand | Web (GA) - Koddi Changes Required to Enable successful e2e workflow",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11712",
+              "summary": "Cobrand | Web - Commerce Web App - Koddi Changes Required to Enable successful e2e workflow",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 5,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11745",
+              "summary": " Cobrand | Web(QA only) -Applynow button with actionUrl from web",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Mahammed Afrid",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11757",
+              "summary": " Cobrand | web| Book your cruise widget visibility check ",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11953",
+              "summary": "Cobrand | Review cobrand/info failures since 3/30/2026",
+              "typeName": "Action",
+              "priorityName": "P1",
+              "assigneeName": "Madhu Nandikonda",
+              "storyPoints": 0,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-11955",
+              "summary": "Cobrand | Web | Spike | Silversea - RN Hosting Analysis",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Elaine Santos Quintana",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12012",
+              "summary": "Cobrand | iOS | Non-Cobrand Ads — Consume subtitle and adLabel fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12014",
+              "summary": "Cobrand | Web | Customer Journey | Non-Cobrand Ads — Consume subtitle, adLabel and title fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12015",
+              "summary": "Cobrand | RN | Cobrand Ads — Consume subtitle and adLabel fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12270",
+              "summary": "CLONE - Cobrand | Android | Remove Program name check and replace with Program Code and Show correct Image in celebrity \"Book your next Cruise\"\"",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12271",
+              "summary": "CLONE - Cobrand | Android | Non-Cobrand Ads — Consume subtitle and adLabel fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12451",
+              "summary": "Cobrand | Web | Customer Journey | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12452",
+              "summary": "Cobrand | Web | Commerce Web App | Non-Cobrand Ads — Consume subtitle, adLabel, secondaryImage and title fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12453",
+              "summary": "Cobrand | Web | Commerce Web App | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12455",
+              "summary": "Cobrand | Web | Guest Check-In | Non-Cobrand Ads — Consume subtitle, adLabel and title fields",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12456",
+              "summary": "Cobrand | Web | Guest Check-In | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12458",
+              "summary": "Cobrand | iOS | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12461",
+              "summary": "Cobrand | Android | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12463",
+              "summary": "Cobrand | React Native | Koddi Analytics — Impression + Click Beacons",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12506",
+              "summary": "Cobrand | Web| Remove Progamme check and show Book Cruise for nonCH",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Elaine Santos Quintana",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12619",
+              "summary": "Cobrand | Android - Remove Duplicate Retail Media Calls From Home, Dashboard, Profile Screens",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12627",
+              "summary": "Loyalty.Cobrand | APP\\WEB | QA | Validation of Co-Brand ADS ",
+              "typeName": "Action",
+              "priorityName": "P3",
+              "assigneeName": "Divya Jyoti Singh",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-12714",
+              "summary": "Cobrand | iOS - Need to know ad placement not passing actionUrls to RN ",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12724",
+              "summary": "Cobrand | WEB | Guest Check-in | Check the koddi banner visibility in boarding pass from customer journey",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12732",
+              "summary": "Cobrand | WEB | Commerce Web App | Remove unwanted Guard for Koddi Banner and fix build issue",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12737",
+              "summary": "BUG | Cobrand | Analytics | iOS | Fix Koddi Impressions trackState",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-12746",
+              "summary": "Cobrand | Web | Bug - royalOne and royalOnePlus action URL not being picked up from sessionStorage",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12848",
+              "summary": "iOS| Regression Stage | Koddi verifications -Royal/Celebrity- NON CH -The Koddi ads are displayed as loading experience, When Koddi LD flag is false and Blackoutperiod as false",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Prabhat Kumar",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-12849",
+              "summary": "Web | Regression Stage | Royal/Celebrity- NON CH - Book Your Next Cruise is not displaying if user is non US resident.",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-12850",
+              "summary": "AEM |Regression_Shore_AEM_Royal_Non CH_Terms and condition navigation is taking time to load",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Dipankar Bej",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-12851",
+              "summary": "RN| Regression_Shore & Ship_RN_Royal_Non CH_View All Benefits header is not displayed accordingly for Iphone 16 e only",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sinku Paliwal",
+              "storyPoints": 0,
+              "status": "Dev In Progress"
+            }
+          ],
+          "completedOutsideIssues": [
+            {
+              "key": "LOY-6263",
+              "summary": "Cobrand | iOS | Resiliency when Cobrand info is not available",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Kumar Tiwari",
+              "storyPoints": 3,
+              "status": "Abandon"
+            }
+          ],
+          "removedIssues": [
+            {
+              "key": "LOY-4742",
+              "summary": "Cobrand | Android | Route | Deep link to cobrand hub",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Bharat Lagad",
+              "storyPoints": 5,
+              "status": "Grooming Complete"
+            },
+            {
+              "key": "LOY-4745",
+              "summary": "Cobrand | iOS | Route | Deep link to cobrand hub (react native screen)",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Ravirajakumar Patil",
+              "storyPoints": 8,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-6538",
+              "summary": "Cobrand | iOS: Create app route to send guests to React version of cobrand hub",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Deepak Dolas",
+              "storyPoints": 5,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-6539",
+              "summary": "Cobrand | Android: Create app route to send guests to React version of cobrand non-CH hub ",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Bharat Lagad",
+              "storyPoints": 5,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-7564",
+              "summary": "Cobrand | App |  Figma Tokenization for new color schemes ",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Basil Kurian M B",
+              "storyPoints": 5,
+              "status": "Grooming Complete"
+            },
+            {
+              "key": "LOY-9630",
+              "summary": "Cobrand | iOS | Pass in the required info when instantiating the Cobrand component",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Kumar Tiwari",
+              "storyPoints": 3,
+              "status": "Grooming Complete"
+            },
+            {
+              "key": "LOY-9785",
+              "summary": "Cobrand | Web | Spike | Route - Deep link to desktop cobrand hub in Royal ONE Program",
+              "typeName": "Spike",
+              "priorityName": "P1",
+              "assigneeName": "Santosh Kudulla",
+              "storyPoints": 2,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-10038",
+              "summary": "Cobrand | Services | loyalty-hub - AEM Content Integration for Silversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Prabhat Kumar",
+              "storyPoints": 2,
+              "status": "Blocked"
+            },
+            {
+              "key": "LOY-10043",
+              "summary": "Cobrand | AEM | Cardholder Content for Silversea",
+              "typeName": "Story",
+              "priorityName": "P1",
+              "assigneeName": "Divya Jyoti Singh",
+              "storyPoints": 5,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-10046",
+              "summary": "Cobrand | AEM | Update Content for Contact Support (redemption section) in Silversea",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Divya Jyoti Singh",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-10765",
+              "summary": "Cobrand | AEM | Final terms and conditions document to add full text to Digital platforms",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-10766",
+              "summary": "Cobrand | AEM | Brand-provided properly released image updates for hub pages",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sean Flynn",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-10813",
+              "summary": "Cobrand | Web | Create necessary guards and enable route for redirect to silversea for new cobrand hub on Silversea web",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Sathis Kumar A",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-10814",
+              "summary": "Cobrand | Web | Create/register pageID for Silversea cobrand hub for Koddi ads for non-CHs - Silversea",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Unassigned",
+              "storyPoints": 0,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-10911",
+              "summary": "Cobrand | RN Web | Images in View All Benefits section - RN version upgrade",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Karthikeyan P",
+              "storyPoints": 5,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-11578",
+              "summary": "Cobrand | Analytics | react web | Track interactions on the anniversary reward modal",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Valeria Federova",
+              "storyPoints": 2,
+              "status": "ReOpen"
+            },
+            {
+              "key": "LOY-11884",
+              "summary": "Cobrand | Web | Koddi | Customer Journey - New Koddi Placement for Loyalty Programs (Page ID - 2302)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Asha KK",
+              "storyPoints": 5,
+              "status": "Grooming Complete"
+            },
+            {
+              "key": "LOY-11885",
+              "summary": "AEM Changes for RN package size reduction",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Dipankar Bej",
+              "storyPoints": 2,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-11886",
+              "summary": "Service Changes for RN package size reduction",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Saranya M",
+              "storyPoints": 2,
+              "status": "Tech Design"
+            },
+            {
+              "key": "LOY-12454",
+              "summary": "Cobrand | Web | Commerce Web App | Adobe Analytics — Ad Impression + Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Arun Prasan Mallick",
+              "storyPoints": 3,
+              "status": "Blocked"
+            },
+            {
+              "key": "LOY-12457",
+              "summary": "[Analytics] Web | Guest Check-In | Adobe Analytics — Ad Impression + Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Chandrika Patil",
+              "storyPoints": 3,
+              "status": "Open"
+            },
+            {
+              "key": "LOY-12459",
+              "summary": "Cobrand | iOS | Analytics | Add Koddi UID to Ad Impression + Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Amit Kumar Tiwari",
+              "storyPoints": 3,
+              "status": "Dev In Progress"
+            },
+            {
+              "key": "LOY-12462",
+              "summary": "Cobrand | Android | Analytics | Add Koddi UID to Ad Impression + Click Events",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Bharat Lagad",
+              "storyPoints": 3,
+              "status": "Dev In Progress"
+            }
+          ],
+          "addedDuringSprintCount": 51,
+          "addedDuringSprintPoints": 73,
+          "completedPoints": 65,
+          "incompletedPoints": 58,
+          "completedOutsidePoints": 3,
+          "removedPoints": 70
+        },
+        "velocityStats": {
+          "avg": 149,
+          "avgRecent": 117,
+          "trend": "declining",
+          "sprints": [
+            {
+              "sprintId": 9620,
+              "sprintName": "LOY COB 26 S02",
+              "state": "closed",
+              "committed": 346,
+              "completed": 247
+            },
+            {
+              "sprintId": 9621,
+              "sprintName": "LOY COB 26 S03",
+              "state": "closed",
+              "committed": 146,
+              "completed": 169.5
+            },
+            {
+              "sprintId": 9622,
+              "sprintName": "LOY COB 26 S04",
+              "state": "closed",
+              "committed": 276.5,
+              "completed": 128
+            },
+            {
+              "sprintId": 9721,
+              "sprintName": "LOY COB 26 S05",
+              "state": "closed",
+              "committed": 86,
+              "completed": 150
+            },
+            {
+              "sprintId": 9722,
+              "sprintName": "LOY COB 26 S06",
+              "state": "closed",
+              "committed": 154,
+              "completed": 136
+            },
+            {
+              "sprintId": 9790,
+              "sprintName": "LOY COB 26 S07",
+              "state": "closed",
+              "committed": 106,
+              "completed": 65
+            }
+          ]
+        },
+        "completion": {
+          "total": 73,
+          "completed": 39,
+          "completedInSprint": 38,
+          "completedOutside": 1,
+          "pct": 53,
+          "completedPts": 68,
+          "totalPts": 126,
+          "ptsPct": 54
+        },
+        "sprintHealth": "Red",
+        "healthReason": "53% of issues completed.",
+        "velocityAssessment": "Velocity trend is declining, avg 149 pts.",
+        "completionAssessment": "39/73 issues done.",
+        "goalMet": null,
+        "goalComment": "[Dry-run]",
+        "risks": [],
+        "recommendations": [],
+        "predictedVelocity": 149,
+        "summary": "[Dry-run — Claude not called]",
+        "platformVelocity": [
+          {
+            "platform": "React Native",
+            "avg": 67,
+            "total": 404,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 102.5,
+              "9621": 93.5,
+              "9622": 59,
+              "9721": 66,
+              "9722": 53,
+              "9790": 30
+            }
+          },
+          {
+            "platform": "Microservices",
+            "avg": 20,
+            "total": 120.5,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 41,
+              "9621": 22.5,
+              "9622": 25,
+              "9721": 24,
+              "9722": 5,
+              "9790": 3
+            }
+          },
+          {
+            "platform": "Android",
+            "avg": 18,
+            "total": 107,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 39,
+              "9621": 10,
+              "9622": 9,
+              "9721": 22,
+              "9722": 27,
+              "9790": 0
+            }
+          },
+          {
+            "platform": "Web",
+            "avg": 16,
+            "total": 98,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 9,
+              "9621": 16,
+              "9622": 19,
+              "9721": 21,
+              "9722": 11,
+              "9790": 22
+            }
+          },
+          {
+            "platform": "iOS",
+            "avg": 15,
+            "total": 91.5,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 22.5,
+              "9621": 14,
+              "9622": 6,
+              "9721": 14,
+              "9722": 31,
+              "9790": 4
+            }
+          },
+          {
+            "platform": "AEM",
+            "avg": 11,
+            "total": 64,
+            "sprintCount": 6,
+            "bySprint": {
+              "9620": 30,
+              "9621": 12,
+              "9622": 10,
+              "9721": 3,
+              "9722": 4,
+              "9790": 5
+            }
+          },
+          {
+            "platform": "Mobile",
+            "avg": 0,
+            "total": 0,
+            "sprintCount": 2,
+            "bySprint": {
+              "9621": 0,
+              "9622": 0
+            }
+          }
+        ],
+        "teamName": "LOY_COB",
+        "displayName": "LOY_COB (Board 1599)"
+      }
+    }
+  ],
+  "1718": [
+    {
+      "boardId": "1718",
+      "sprintId": 9632,
+      "sprintName": "LOY CAS 26 S07",
+      "runAt": "2026-04-20T02:00:20.794Z",
+      "analysis": {
+        "boardId": "1718",
+        "sprintReport": {
+          "sprintId": 9632,
+          "sprintName": "LOY CAS 26 S07",
+          "sprintGoal": null,
+          "startDate": "01/Apr/26 8:28 PM",
+          "endDate": "14/Apr/26 8:28 PM",
+          "completeDate": "15/Apr/26 10:16 AM",
+          "state": "closed",
+          "completedIssues": [
+            {
+              "key": "LOY-10928",
+              "summary": "Casino | RN | Service Integration | Offer Compare Landing Page",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10937",
+              "summary": "Casino | RN | UI | Add Booking Fee to Offer card and PDP",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-10938",
+              "summary": "Casino | RN | Service Integration | Booking fee",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11216",
+              "summary": "Casino | Services | Update Loyalty.Casino-Events to create The Ingestion Flow for push notification",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11218",
+              "summary": "Casino | Services | Update Loyalty.Casino-Events to create The Scheduler Flow for push notification",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11358",
+              "summary": "Android - App is Crashing when Clicking on Pay NextCruise deposit CTA",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Surajit Kar",
+              "storyPoints": 0,
+              "status": "Rejected"
+            },
+            {
+              "key": "LOY-11724",
+              "summary": "Casino | Android | Transcoding view for Booking url flow ",
+              "typeName": "Spike",
+              "priorityName": "P1",
+              "assigneeName": "Alec Medina",
+              "storyPoints": 1,
+              "status": "Closed"
+            },
+            {
+              "key": "LOY-11756",
+              "summary": "Casino | RN | Display Cruise Loyalty (Crown & Anchor/Celebrity)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Unassigned",
+              "storyPoints": 0,
+              "status": "Abandon"
+            },
+            {
+              "key": "LOY-11786",
+              "summary": "RN | It should display \"None\" on the offer compare screen if any value is missing from service. But it is displaying empty on the device",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11787",
+              "summary": "Casino | RN | CTA alignment and shadow of the Header section in compare offers Screen alongwith View Sailing CTA, letter 'S' in offer page is displaying in upper case ,mismatches with Figma ",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11794",
+              "summary": "Casino | Service | Display Cruise Loyalty (Crown & Anchor/Celebrity)",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Unassigned",
+              "storyPoints": 0,
+              "status": "Abandon"
+            },
+            {
+              "key": "LOY-11803",
+              "summary": "Casino | RN | Toggle Consumption | Transcoding Booking URL",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11827",
+              "summary": "Casino | RN | No Offers Widget ",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11861",
+              "summary": "Casino | RN - Bundle Size Investigation - Loyalty Casino NPM Package",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 3,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-11873",
+              "summary": "Casino | iOS | Initial Props is Not having some values",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Ajay Kumar Singh",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12505",
+              "summary": "Casino | Service | Offers endpoint responds in error instead of null",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12508",
+              "summary": "Casino | Android | Hide Casino entry points when 204 error is returned",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12509",
+              "summary": "Casino | RN | Hub Terms & Conditions PDF link does not open – Club Royale T&C PDF",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12522",
+              "summary": "Refresh Token Logic Incorrect for 401",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12523",
+              "summary": "Casino | Service | Optimize COH Offers API Performance by Fetching Sailing Info per Offer",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12581",
+              "summary": "Casino| RN | saildate should be visible on the itinerary screen,if only saildate is coming from service response without full date range",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12703",
+              "summary": "Casino entry point is showing error message for Casino member ",
+              "typeName": "Bug",
+              "priorityName": "P2",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "Ready for Production"
+            },
+            {
+              "key": "LOY-12710",
+              "summary": "Casino | Service | Adjust Casino Service logs so we can observe behavior more granularly",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 0,
+              "status": "Ready for Production"
+            }
+          ],
+          "incompletedIssues": [
+            {
+              "key": "LOY-4686",
+              "summary": "Casino | Analytics (R1) | React Native | Casino Offer \"Book Now\" Modal trackState",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-4758",
+              "summary": "Casino | RN | Add Sort & Filter Header",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-5226",
+              "summary": "Casino | Service | Implement the Loyalty.Casino's Get Partner Programs for a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "JustinBabu Joseph",
+              "storyPoints": 5,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-6417",
+              "summary": "Casino | Analytics (R1) | React Native | redemption offer trackState",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-6418",
+              "summary": "Casino | Analytics | React Native | \"Yes\" TrackAction on Offer redemption",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "QA Blocked"
+            },
+            {
+              "key": "LOY-7406",
+              "summary": "Casino | RN | Offer Detail description ",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Priya Murugaraj",
+              "storyPoints": 3,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-8094",
+              "summary": "Casino | RN | Sort & Filter Page",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Surajit Kar",
+              "storyPoints": 3,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-8101",
+              "summary": "Casino | RN | Component | Perks Page",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-8102",
+              "summary": "Casino | RN | Connect Pages to CTAs",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-9454",
+              "summary": "Casino | Service | Implement the Construct.COH Get All Available Partner Programs endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 3,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-10089",
+              "summary": "Casino | Service | Design the Construct.COH Remove Partner Program for a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-10091",
+              "summary": "Casino | Service | Design the Loyalty.Casino's Get Partner Programs for a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-10092",
+              "summary": "Casino | Service | Implement the Construct.COH Get Partner Programs for a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "JustinBabu Joseph",
+              "storyPoints": 5,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-10093",
+              "summary": "Casino | Service | Implement the Construct.COH Update Partner Program for a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 3,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-10936",
+              "summary": "Casino | Service | Add booking fee to offers endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 3,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11029",
+              "summary": "Casino | RN | Reuse Filter pages",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-11030",
+              "summary": "Casino | RN | Action | Configure Reset CTA",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Priya Murugaraj",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-11031",
+              "summary": "Casino | RN | Action | Apply CTA",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Priya Murugaraj",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-11110",
+              "summary": "Casino | Service | Design the Loyalty.Casino's Link Partner Program to a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Keshwan Ramlu",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-11120",
+              "summary": "Casino | Service | Design the Loyalty.Casino's Remove Partner Program from a Player endpoint",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Keshwan Ramlu",
+              "storyPoints": 2,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-11433",
+              "summary": "Loyalty | iOS | RNHost | Bridge to pass ship code to RN",
+              "typeName": "Story",
+              "priorityName": "P2",
+              "assigneeName": "Jose Antonio Mena",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11601",
+              "summary": "Casino | Service| Service should not send available ship code for Offer with past date",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 2,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11610",
+              "summary": "Casino | iOS | Booking URL not opening in transcoding",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Sakthi Vadivel Arumugam",
+              "storyPoints": 5,
+              "status": "Blocked"
+            },
+            {
+              "key": "LOY-11611",
+              "summary": "Casino | Android | Booking URL not opening in transcoding",
+              "typeName": "Bug",
+              "priorityName": "P1",
+              "assigneeName": "Parthiban Ramasamy",
+              "storyPoints": 5,
+              "status": "Blocked"
+            },
+            {
+              "key": "LOY-11635",
+              "summary": "BUG | Casino | Analytics (R1) | React Native | Casino Offers trackState - Fix product string ",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-11636",
+              "summary": "BUG | Casino | Analytics (R1) | iOS | Casino entry errorMessage firing when casion entry point is hidden with 0204 error",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Cassandra Gasparin",
+              "storyPoints": 2,
+              "status": "ReOpen"
+            },
+            {
+              "key": "LOY-11661",
+              "summary": "Casino | Service | Consuming AEM content",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 1,
+              "status": "Ready for SignOff"
+            },
+            {
+              "key": "LOY-11869",
+              "summary": "Casino | RN | Header on Hub not displaying correctly",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "QA Test"
+            },
+            {
+              "key": "LOY-12503",
+              "summary": "Casino | Services | Room Offer Category",
+              "typeName": "Story",
+              "priorityName": "P3",
+              "assigneeName": "Roberto Aleman",
+              "storyPoints": 3,
+              "status": "Code Review"
+            },
+            {
+              "key": "LOY-12539",
+              "summary": "Casino | RN | UI | CTA wrong size",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Devana Jackson",
+              "storyPoints": 1,
+              "status": "QA Test"
+            }
+          ],
+          "completedOutsideIssues": [],
+          "removedIssues": [
+            {
+              "key": "LOY-12507",
+              "summary": "Casino | RN | Error message when sailing display incorrectly in App",
+              "typeName": "Bug",
+              "priorityName": "P3",
+              "assigneeName": "Jai Kumar",
+              "storyPoints": 0,
+              "status": "Open"
+            }
+          ],
+          "addedDuringSprintCount": 16,
+          "addedDuringSprintPoints": 14,
+          "completedPoints": 28,
+          "incompletedPoints": 75,
+          "completedOutsidePoints": 0,
+          "removedPoints": 0
+        },
+        "velocityStats": {
+          "avg": 64,
+          "avgRecent": 61,
+          "trend": "stable",
+          "sprints": [
+            {
+              "sprintId": 9616,
+              "sprintName": "LOY CAS 26 S02",
+              "state": "closed",
+              "committed": 157,
+              "completed": 99
+            },
+            {
+              "sprintId": 9617,
+              "sprintName": "LOY CAS 26 S03",
+              "state": "closed",
+              "committed": 122,
+              "completed": 59
+            },
+            {
+              "sprintId": 9618,
+              "sprintName": "LOY CAS 26 S04",
+              "state": "closed",
+              "committed": 138,
+              "completed": 44
+            },
+            {
+              "sprintId": 9629,
+              "sprintName": "LOY CAS 26 S05",
+              "state": "closed",
+              "committed": 125,
+              "completed": 109
+            },
+            {
+              "sprintId": 9630,
+              "sprintName": "LOY CAS 26 S06",
+              "state": "closed",
+              "committed": 82,
+              "completed": 45
+            },
+            {
+              "sprintId": 9632,
+              "sprintName": "LOY CAS 26 S07",
+              "state": "closed",
+              "committed": 91,
+              "completed": 28
+            }
+          ]
+        },
+        "completion": {
+          "total": 53,
+          "completed": 23,
+          "completedInSprint": 23,
+          "completedOutside": 0,
+          "pct": 43,
+          "completedPts": 28,
+          "totalPts": 103,
+          "ptsPct": 27
+        },
+        "sprintHealth": "Red",
+        "healthReason": "43% of issues completed.",
+        "velocityAssessment": "Velocity trend is stable, avg 64 pts.",
+        "completionAssessment": "23/53 issues done.",
+        "goalMet": null,
+        "goalComment": "[Dry-run]",
+        "risks": [],
+        "recommendations": [],
+        "predictedVelocity": 64,
+        "summary": "[Dry-run — Claude not called]",
+        "platformVelocity": [
+          {
+            "platform": "React Native",
+            "avg": 26,
+            "total": 155,
+            "sprintCount": 6,
+            "bySprint": {
+              "9616": 32,
+              "9617": 30,
+              "9618": 15,
+              "9629": 31,
+              "9630": 29,
+              "9632": 18
+            }
+          },
+          {
+            "platform": "Microservices",
+            "avg": 24,
+            "total": 143,
+            "sprintCount": 6,
+            "bySprint": {
+              "9616": 39,
+              "9617": 15,
+              "9618": 21,
+              "9629": 53,
+              "9630": 8,
+              "9632": 7
+            }
+          },
+          {
+            "platform": "iOS",
+            "avg": 6,
+            "total": 36,
+            "sprintCount": 6,
+            "bySprint": {
+              "9616": 13,
+              "9617": 4,
+              "9618": 4,
+              "9629": 11,
+              "9630": 3,
+              "9632": 1
+            }
+          },
+          {
+            "platform": "Android",
+            "avg": 6,
+            "total": 38,
+            "sprintCount": 6,
+            "bySprint": {
+              "9616": 8,
+              "9617": 8,
+              "9618": 5,
+              "9629": 12,
+              "9630": 3,
+              "9632": 2
+            }
+          },
+          {
+            "platform": "AEM",
+            "avg": 3,
+            "total": 13,
+            "sprintCount": 5,
+            "bySprint": {
+              "9616": 6,
+              "9617": 2,
+              "9618": 1,
+              "9629": 2,
+              "9630": 2
+            }
+          },
+          {
+            "platform": "Mobile",
+            "avg": 1,
+            "total": 1,
+            "sprintCount": 1,
+            "bySprint": {
+              "9617": 1
+            }
+          }
+        ],
+        "teamName": "LOY_CAS",
+        "displayName": "LOY_CAS (Board 1718)"
+      }
+    }
+  ]
+}

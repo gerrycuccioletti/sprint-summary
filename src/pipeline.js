@@ -51,7 +51,7 @@ async function runPipeline(boardId, opts = {}) {
 
   if (options.slack) {
     console.log(`${label} Sending Slack notification...`);
-    await sendSlackNotification(analysis, sprint);
+    await sendSlackNotification(analysis, sprint, boardId);
     console.log(`${label} Slack sent.`);
   }
 

@@ -6,9 +6,11 @@ const express  = require('express');
 const store        = require('../store');
 const releaseStore = require('../release-store');
 const setStore     = require('../release-set-store');
+const analyticsStore = require('../sprint-analytics-store');
 const { runMultiBoard, runPipeline, getBoardIdsFromEnv }                       = require('../pipeline');
 const { runMultiVersionPipeline, runReleasePipeline, getReleaseConfigFromEnv } = require('../release-pipeline');
 const { runAllReleaseSets, runReleaseSetPipeline, getReleaseSetConfigs }       = require('../release-set-pipeline');
+const { runMultiBoardAnalytics, runSprintAnalyticsPipeline, getAnalyticsBoardIds } = require('../sprint-analytics-pipeline');
 
 const app  = express();
 const PORT = process.env.DASHBOARD_PORT || 3000;
@@ -63,6 +65,46 @@ app.post('/api/run', async (req, res) => {
     } else {
       const result = await runPipeline(boardId, opts);
       res.json({ ok: true, boardId, sprint: result.sprint.name, health: result.analysis.overallHealth });
+    }
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
+// GET /api/analytics — all board analytics summaries
+app.get('/api/analytics', (_req, res) => {
+  res.json(analyticsStore.getAllAnalyticsSummaries());
+});
+
+// GET /api/analytics/:boardId — full history for a board
+app.get('/api/analytics/:boardId', (req, res) => {
+  const reports = analyticsStore.getAnalyticsReports(req.params.boardId);
+  if (!reports.length) return res.status(404).json({ error: 'No analytics reports found.' });
+  res.json(reports);
+});
+
+// POST /api/analytics/run — trigger fresh analytics run
+app.post('/api/analytics/run', async (req, res) => {
+  const { boardId, all, slack, html } = req.body || {};
+  const opts = {
+    console: true,
+    slack:   slack ?? (process.env.SEND_SLACK !== 'false'),
+    html:    html  ?? (process.env.SAVE_HTML_REPORT === 'true'),
+    store:   true,
+  };
+  try {
+    if (all || !boardId) {
+      const ids     = getAnalyticsBoardIds();
+      const results = await runMultiBoardAnalytics(ids, opts);
+      res.json({ ok: true, results: results.map(r => ({
+        boardId:   r.boardId,
+        sprint:    r.analysis?.sprintReport?.sprintName,
+        health:    r.analysis?.sprintHealth,
+        error:     r.error,
+      }))});
+    } else {
+      const result = await runSprintAnalyticsPipeline(boardId, opts);
+      res.json({ ok: true, boardId, sprint: result.analysis.sprintReport.sprintName, health: result.analysis.sprintHealth });
     }
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message });
@@ -265,6 +307,7 @@ function dashboardHtml() {
   <div class="tab active" onclick="switchTab('sprints')">Sprints</div>
   <div class="tab"        onclick="switchTab('releases')">Releases</div>
   <div class="tab"        onclick="switchTab('release-sets')">Release sets</div>
+  <div class="tab"        onclick="switchTab('analytics')">Sprint analytics</div>
 </div>
 
 <!-- ══ SPRINTS TAB ══════════════════════════════════════════════════════ -->
@@ -387,10 +430,55 @@ function dashboardHtml() {
 </div>
 </div>
 
+<!-- ══ ANALYTICS TAB ════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-analytics">
+<div class="container">
+  <div class="section-title">Sprint analytics</div>
+  <div class="cards-grid" id="analytics-grid"><div class="empty">Loading...</div></div>
+
+  <div class="detail" id="analytics-detail">
+    <div class="detail-header">
+      <div>
+        <div class="detail-title" id="ad-title"></div>
+        <div class="detail-meta"  id="ad-meta"></div>
+      </div>
+      <div id="ad-health"></div>
+    </div>
+    <div class="summary-text" id="ad-summary"></div>
+    <div class="stats-row"    id="ad-stats"></div>
+
+    <div style="display:flex;gap:0;border-bottom:1px solid #e2e8f0;margin:20px 0 16px">
+      <div class="subtab active" onclick="showAnalyticsSubTab('completion',this)" style="padding:8px 16px;font-size:13px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px">Completion</div>
+      <div class="subtab" onclick="showAnalyticsSubTab('velocity',this)" style="padding:8px 16px;font-size:13px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px">Velocity</div>
+      <div class="subtab" onclick="showAnalyticsSubTab('incomplete',this)" style="padding:8px 16px;font-size:13px;font-weight:500;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px">Incomplete</div>
+    </div>
+    <div id="anpanel-completion"></div>
+    <div id="anpanel-velocity"   style="display:none"></div>
+    <div id="anpanel-incomplete" style="display:none"></div>
+
+    <div class="section" id="ad-risks-sec"  style="display:none;margin-top:20px"><h3 style="font-size:14px;font-weight:600;margin-bottom:10px">Risks</h3><div id="ad-risks"></div></div>
+    <div class="section" id="ad-recs-sec"   style="display:none;margin-top:20px"><h3 style="font-size:14px;font-weight:600;margin-bottom:10px">Recommendations</h3><ul class="rec-list" id="ad-recs"></ul></div>
+
+    <div class="section-title" style="margin-top:28px">Run history</div>
+    <table class="history-table">
+      <thead><tr><th>Run at</th><th>Sprint</th><th>Health</th><th>Completion</th><th>Velocity avg</th></tr></thead>
+      <tbody id="ad-history"></tbody>
+    </table>
+  </div>
+
+  <div class="run-bar">
+    <button class="btn primary" onclick="runAllAnalytics()">Run all boards</button>
+    <button class="btn" id="btn-run-analytics" onclick="runSelectedAnalytics()" disabled>Run selected board</button>
+    <span class="spinner" id="an-spinner"></span>
+    <span class="status-msg" id="an-status"></span>
+  </div>
+</div>
+</div>
+
 <script>
 // ── Tab switching ─────────────────────────────────────────────────────────
 function switchTab(name) {
-  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['sprints','releases','release-sets'][i] === name));
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['sprints','releases','release-sets','analytics'][i] === name));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
 }
@@ -861,12 +949,174 @@ async function runSelectedSet() {
   });
 }
 
+// ── ANALYTICS ─────────────────────────────────────────────────────────────
+let selectedAnalyticsBoardId = null;
+
+function showAnalyticsSubTab(id, tab) {
+  ['completion','velocity','incomplete'].forEach(p => {
+    document.getElementById('anpanel-' + p).style.display = p === id ? 'block' : 'none';
+  });
+  document.querySelectorAll('#tab-analytics .subtab').forEach(t => {
+    t.style.color = '#64748b'; t.style.borderBottomColor = 'transparent';
+  });
+  tab.style.color = '#0f172a'; tab.style.borderBottomColor = '#0f172a';
+}
+
+async function loadAnalytics() {
+  const res  = await fetch('/api/analytics');
+  const data = await res.json();
+  const grid = document.getElementById('analytics-grid');
+  if (!data.length) { grid.innerHTML = '<div class="empty">No sprint analytics yet. Click "Run all boards" to start.</div>'; return; }
+  grid.innerHTML = data.map(s => {
+    const hColor = { Green:'#10b981', Yellow:'#eab308', Red:'#ef4444' }[s.sprintHealth] || '#94a3b8';
+    const hBg    = { Green:'#d1fae5', Yellow:'#fef9c3', Red:'#fee2e2' }[s.sprintHealth] || '#f1f5f9';
+    const hText  = { Green:'#065f46', Yellow:'#854d0e', Red:'#991b1b' }[s.sprintHealth] || '#64748b';
+    const ran    = s.latestRun ? new Date(s.latestRun).toLocaleString() : 'Never';
+    const tEmoji = { improving:'📈', stable:'➡️', declining:'📉' }[s.velocityTrend] || '';
+    return \`<div class="card \${selectedAnalyticsBoardId === s.boardId ? 'selected' : ''}" onclick="selectAnalyticsBoard('\${s.boardId}')">
+      <div class="card-name">Board \${s.boardId}</div>
+      <div class="card-sub">\${s.sprintName || '—'}</div>
+      <span class="health-pill \${s.sprintHealth || 'Unknown'}"><span class="health-dot"></span>\${s.sprintHealth || 'Unknown'}</span>
+      <div class="card-stats">
+        <span><strong>\${s.completion}%</strong> done</span>
+        <span>\${tEmoji} <strong>\${s.velocityAvg}</strong> pts avg</span>
+      </div>
+      <div style="font-size:11px;color:#94a3b8;margin-top:8px">Last run: \${ran}</div>
+    </div>\`;
+  }).join('');
+}
+
+async function selectAnalyticsBoard(boardId) {
+  selectedAnalyticsBoardId = boardId;
+  document.getElementById('btn-run-analytics').disabled = false;
+  await loadAnalytics();
+  const res = await fetch(\`/api/analytics/\${boardId}\`);
+  if (!res.ok) return;
+  renderAnalyticsDetail(boardId, await res.json());
+}
+
+function renderAnalyticsDetail(boardId, reports) {
+  const panel  = document.getElementById('analytics-detail');
+  const latest = reports[0];
+  const a      = latest.analysis;
+  const sprint = a.sprintReport;
+  const comp   = a.completion;
+  panel.classList.add('visible');
+
+  document.getElementById('ad-title').textContent   = sprint.sprintName;
+  document.getElementById('ad-meta').textContent    = \`Board \${boardId} · \${sprint.startDate} → \${sprint.endDate} · Last run: \${new Date(latest.runAt).toLocaleString()}\`;
+  document.getElementById('ad-health').innerHTML    = healthPill(a.sprintHealth);
+  document.getElementById('ad-summary').textContent = a.summary || '—';
+
+  document.getElementById('ad-stats').innerHTML = [
+    \`<div class="stat-pill"><div class="label">Issues done</div><div class="value">\${comp.completed}/\${comp.total}</div></div>\`,
+    \`<div class="stat-pill"><div class="label">Completion</div><div class="value">\${comp.pct}%</div></div>\`,
+    \`<div class="stat-pill"><div class="label">Points done</div><div class="value">\${sprint.completedPoints}</div></div>\`,
+    \`<div class="stat-pill"><div class="label">Velocity avg</div><div class="value">\${a.velocityStats?.avg || '—'}</div></div>\`,
+    \`<div class="stat-pill"><div class="label">Predicted</div><div class="value">\${a.predictedVelocity || '—'}</div></div>\`,
+    \`<div class="stat-pill"><div class="label">Incomplete</div><div class="value" style="color:\${sprint.incompletedIssues.length>0?'#ef4444':'#10b981'}">\${sprint.incompletedIssues.length}</div></div>\`,
+  ].join('');
+
+  // Completion sub-panel
+  const pct1 = comp.pct || 0, pct2 = comp.ptsPct || 0;
+  const barHtml = (pct) => {
+    const color = pct>=80?'#10b981':pct>=60?'#f59e0b':'#ef4444';
+    return \`<div style="display:flex;align-items:center;gap:10px">
+      <div style="flex:1;background:#f1f5f9;border-radius:99px;height:8px;overflow:hidden">
+        <div style="background:\${color};width:\${pct}%;height:100%;border-radius:99px"></div>
+      </div>
+      <span style="font-size:12px;color:#64748b;min-width:36px">\${pct}%</span>
+    </div>\`;
+  };
+  document.getElementById('anpanel-completion').innerHTML =
+    \`<div style="margin-bottom:12px"><div style="font-size:13px;color:#64748b;margin-bottom:4px">Issues</div>\${barHtml(pct1)}</div>
+     <div><div style="font-size:13px;color:#64748b;margin-bottom:4px">Story points</div>\${barHtml(pct2)}</div>
+     \${a.completionAssessment ? \`<p style="font-size:13px;color:#64748b;margin-top:10px">\${a.completionAssessment}</p>\` : ''}\`;
+
+  // Velocity sub-panel
+  const vs = a.velocityStats;
+  const velHtml = vs?.sprints?.length
+    ? vs.sprints.slice(-6).map(s => {
+        const max = Math.max(...vs.sprints.map(x=>x.completed), 1);
+        const w1  = Math.round((s.committed/max)*120);
+        const w2  = Math.round((s.completed/max)*120);
+        return \`<div style="margin-bottom:10px">
+          <div style="font-size:12px;color:#64748b;margin-bottom:3px">\${s.sprintName}</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px">
+            <div style="background:#93c5fd;width:\${w1}px;height:6px;border-radius:3px"></div>
+            <span style="font-size:11px;color:#3b82f6">\${s.committed}pts committed</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="background:#10b981;width:\${w2}px;height:6px;border-radius:3px"></div>
+            <span style="font-size:11px;color:#10b981">\${s.completed}pts completed</span>
+          </div>
+        </div>\`;
+      }).join('')
+    : '<div style="color:#94a3b8;font-size:14px">No velocity data.</div>';
+  document.getElementById('anpanel-velocity').innerHTML =
+    \`\${velHtml}\${a.velocityAssessment ? \`<p style="font-size:13px;color:#64748b;margin-top:10px">\${a.velocityAssessment}</p>\` : ''}\`;
+
+  // Incomplete sub-panel
+  document.getElementById('anpanel-incomplete').innerHTML = sprint.incompletedIssues.length
+    ? \`<table class="history-table" style="font-size:13px">
+        <thead><tr><th>Key</th><th>Summary</th><th>Pts</th><th>Status</th><th>Assignee</th></tr></thead>
+        <tbody>\${sprint.incompletedIssues.map(i =>
+          \`<tr><td style="font-family:monospace;color:#3b82f6">\${i.key}</td><td>\${i.summary}</td><td>\${i.storyPoints}</td><td>\${i.status}</td><td>\${i.assigneeName}</td></tr>\`
+        ).join('')}</tbody>
+      </table>\`
+    : '<div style="color:#94a3b8;font-size:14px">No incomplete issues.</div>';
+
+  // Risks
+  const rSec = document.getElementById('ad-risks-sec');
+  if (a.risks?.length) {
+    rSec.style.display = 'block';
+    const rEmoji = { High:'🔴', Medium:'🟡', Low:'🔵' };
+    document.getElementById('ad-risks').innerHTML = a.risks.map(r =>
+      \`<div class="issue-row"><span class="risk-badge risk-\${r.level}">\${r.level}</span> \${r.description}</div>\`).join('');
+  } else rSec.style.display = 'none';
+
+  // Recommendations
+  const recSec = document.getElementById('ad-recs-sec');
+  if (a.recommendations?.length) {
+    recSec.style.display = 'block';
+    document.getElementById('ad-recs').innerHTML = a.recommendations.map(r => \`<li>\${r}</li>\`).join('');
+  } else recSec.style.display = 'none';
+
+  // History
+  document.getElementById('ad-history').innerHTML = reports.map(r => {
+    const ra = r.analysis;
+    return \`<tr>
+      <td>\${new Date(r.runAt).toLocaleString()}</td>
+      <td>\${r.sprintName}</td>
+      <td>\${healthPill(ra.sprintHealth)}</td>
+      <td>\${ra.completion?.pct||0}%</td>
+      <td>\${ra.velocityStats?.avg||'—'}pts</td>
+    </tr>\`;
+  }).join('');
+
+  panel.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+async function runAllAnalytics() {
+  await triggerRun('/api/analytics/run', {all:true}, 'an-spinner', 'an-status', async()=>{
+    await loadAnalytics();
+    if (selectedAnalyticsBoardId) await selectAnalyticsBoard(selectedAnalyticsBoardId);
+  });
+}
+async function runSelectedAnalytics() {
+  if (!selectedAnalyticsBoardId) return;
+  await triggerRun('/api/analytics/run', {boardId:selectedAnalyticsBoardId}, 'an-spinner', 'an-status', async()=>{
+    await loadAnalytics();
+    await selectAnalyticsBoard(selectedAnalyticsBoardId);
+  });
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────
 async function init() {
-  await Promise.all([loadSprints(), loadReleases(), loadReleaseSets()]);
+  await Promise.all([loadSprints(), loadReleases(), loadReleaseSets(), loadAnalytics()]);
 }
 init();
-setInterval(() => { loadSprints(); loadReleases(); loadReleaseSets(); }, 5 * 60 * 1000);
+setInterval(() => { loadSprints(); loadReleases(); loadReleaseSets(); loadAnalytics(); }, 5 * 60 * 1000);
 </script>
 </body>
 </html>`;
