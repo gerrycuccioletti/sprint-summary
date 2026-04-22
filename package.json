@@ -16,7 +16,10 @@
     "schedule": "node src/scheduler.js",
     "test:now": "node run-now.js",
     "dashboard": "node src/dashboard/server.js",
-    "slack-server": "node src/slack-command-server.js"
+    "slack-server": "node src/slack-command-server.js",
+    "cr-kickback": "node cr-kickback-run.js",
+    "qa-kickback": "node qa-kickback-run.js",
+    "rfso-kickback": "node rfso-kickback-run.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
